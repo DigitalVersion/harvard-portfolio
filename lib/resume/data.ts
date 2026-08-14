@@ -119,6 +119,10 @@ const defaultResume: ResumeData = {
 
 export const resumes: Record<string, ResumeData> = {
   default: defaultResume,
+  // Per-job variants live here. Each key becomes a clean URL at
+  // cv.agentdo.agency/<key>. Content is a full ResumeData copy (not a diff)
+  // so each variant can re-order/re-emphasize projects independently.
+  "interview-resources": defaultResume,
 };
 
 export const resumeData = resumes.default;
