@@ -85,13 +85,14 @@ const defaultResume: ResumeData = {
   ],
   projects: [
     {
-      title: "Haven multi-agent debugging",
-      role: "AI systems orchestration",
-      period: "August 2026",
+      title: "Haven (open-source contributor)",
+      role: "Regular contributor, #3 on GitHub's contribution graph",
+      period: "July - August 2026",
       githubUrl: "https://github.com/GlassHaven/Haven/pull/535",
       achievements: [
-        "Coordinated a multi-agent AI pipeline (an execution agent plus two independent review passes on different models) to find and fix two real bugs in Haven, an open-source Android SSH/SFTP client with 1,032 GitHub stars.",
-        "One fix landed on main with authorship preserved; the maintainer called it \"clean work, fast turnaround.\" A second fix (PR #537) is open for review.",
+        "Regular contributor to Haven, a 1,032-star open-source Android SSH/SFTP client, over the past month. Currently #3 contributor on the project's GitHub graph (12 commits, +4,314/-106).",
+        "9 pull requests landed on main, via official merge or maintainer-applied git am with authorship preserved. Examples: porting a floating text input from ConnectBot (PR #439), fixing a silent-failure terminal bug the maintainer called \"clean work\" (PR #535), and adding test-retry to cut down flaky upstream tests (PR #475).",
+        "One additional fix, for SSH session timeouts, is currently open for review (PR #537).",
       ],
     },
     {
