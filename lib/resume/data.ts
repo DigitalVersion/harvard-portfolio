@@ -141,7 +141,7 @@ const cdcLabResume: ResumeData = {
         "Ran laboratory operations, reporting, and quality assurance within Vietnam's Ministry of Health provincial CDC system.",
         "Designed a barcode-based specimen traceability system for PCR testing, scaling throughput from under 300 to about 8,000 samples a day (~26x) during COVID-19; recognized in the Top 50 HIS-COVID Innovations 2021, a program supported by Vietnam's Ministry of Science and Technology.",
         "Cut diagnostic turnaround time by roughly 40% through workflow redesign, plate layout optimization, and quality-assurance monitoring during outbreak response.",
-        "Performed diagnostics across hematology, microbiology, biochemistry, and molecular platforms supporting provincial infectious-disease monitoring.",
+        "Performed diagnostic testing for provincial disease-control programs covering malaria, dengue, hepatitis, intestinal parasites, toxoplasmosis, toxocariasis, and measles, across molecular, microbiology, hematology, and biochemistry platforms.",
         "Trained junior laboratory personnel and used data analysis to manage specimen routing and daily operations.",
       ],
     },
