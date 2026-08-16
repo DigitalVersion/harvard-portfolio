@@ -117,12 +117,95 @@ const defaultResume: ResumeData = {
   ],
 };
 
+// Tailored for US CDC/DGHP "Public Health Specialist (Laboratory)" HCMC
+// (erajobs vacancy 76507). Same facts as defaultResume, re-ordered and
+// re-emphasized for a public-health-laboratory reader: CDC lab experience
+// first, preventive-medicine degree and publications forward, AI work framed
+// as public-sector program design and data analysis.
+const cdcLabResume: ResumeData = {
+  ...defaultResume,
+  personal: {
+    ...defaultResume.personal,
+    title: "Public Health Laboratory Specialist",
+  },
+  summary:
+    "Public health laboratory specialist with five years inside Vietnam's Ministry of Health system at the provincial CDC level, and a Master of Medical Sciences in preventive medicine from Kanazawa University with two peer-reviewed publications. Designed the barcode-based PCR traceability system that scaled CDC Vinh Long from under 300 to about 8,000 samples a day during COVID-19. Now designs and delivers digital-transformation and training programs for public-sector agencies at the Vinh Long Department of Science and Technology.",
+  experience: [
+    {
+      company: "Vinh Long Provincial CDC",
+      position: "Laboratory / Diagnostics Specialist (Medical Laboratory Technologist, Grade III)",
+      location: "Vinh Long, Vietnam",
+      startDate: "2021",
+      endDate: "2026",
+      achievements: [
+        "Ran laboratory operations, reporting, and quality assurance within Vietnam's Ministry of Health provincial CDC system.",
+        "Designed a barcode-based specimen traceability system for PCR testing, scaling throughput from under 300 to about 8,000 samples a day (~26x) during COVID-19; recognized in the Top 50 HIS-COVID Innovations 2021, a program supported by Vietnam's Ministry of Science and Technology.",
+        "Cut diagnostic turnaround time by roughly 40% through workflow redesign, plate layout optimization, and quality-assurance monitoring during outbreak response.",
+        "Performed diagnostics across hematology, microbiology, biochemistry, and molecular platforms supporting provincial infectious-disease monitoring.",
+        "Trained junior laboratory personnel and used data analysis to manage specimen routing and daily operations.",
+      ],
+    },
+    {
+      company: "Vinh Long Department of Science and Technology",
+      position: "Specialist, Innovation and Digital Transformation Center",
+      location: "Vinh Long, Vietnam",
+      startDate: "May 2026",
+      endDate: "Present",
+      achievements: [
+        "Design and implement digital-transformation and AI programs for public-sector agencies and provincial government units.",
+        "Build training curricula and deliver hands-on implementation support for government personnel.",
+        "Evaluate implementation pathways and advise provincial units on applying new technology safely and effectively.",
+      ],
+    },
+    {
+      company: "Turing",
+      position: "AI Quality Analyst (Personalization) — Gemini-related projects",
+      location: "Remote",
+      startDate: "April 2026",
+      endDate: "July 2026",
+      achievements: [
+        "Evaluated Vietnamese-language AI outputs against quality rubrics, task guidelines, and data-security requirements for a Google Gemini-related program.",
+        "Worked 40 hours/week in English with a US-based team across PST timezone overlap.",
+      ],
+    },
+    {
+      company: "ATP & Hoc Vien AI",
+      position: "Founder / Applied AI Systems Designer",
+      location: "Remote, Vietnam",
+      startDate: "2026",
+      endDate: "Present",
+      achievements: [
+        "Built and operate hocvienai.help, an AI learning platform with automated student management, in use by paying customers.",
+        "Designed data workflows connecting AI models with files, APIs, databases, and web systems.",
+      ],
+    },
+  ],
+  skills: [
+    { category: "Lab systems", items: ["PCR workflow design", "Barcode traceability", "Quality assurance"] },
+    { category: "Data analysis", items: ["Advanced spreadsheets", "Databases", "Workflow automation", "LLM evaluation"] },
+    { category: "Program delivery", items: ["Training design", "Public-sector implementation", "Evaluation"] },
+    { category: "Infra", items: ["Linux", "Docker", "Vercel"] },
+  ],
+  projects: [
+    {
+      title: "hocvienai.help",
+      role: "Founder / Full-stack",
+      period: "2026 – Present",
+      url: "https://hocvienai.help",
+      achievements: [
+        "AI learning platform with an integrated chatbot and automated student management, in active use by paying customers.",
+      ],
+    },
+  ],
+};
+
 export const resumes: Record<string, ResumeData> = {
   default: defaultResume,
   // Per-job variants live here. Each key becomes a clean URL at
   // cv.agentdo.agency/<key>. Content is a full ResumeData copy (not a diff)
   // so each variant can re-order/re-emphasize projects independently.
   "interview-resources": defaultResume,
+  "cdc-lab-hcmc": cdcLabResume,
 };
 
 export const resumeData = resumes.default;
