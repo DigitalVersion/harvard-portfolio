@@ -142,6 +142,7 @@ const cdcLabResume: ResumeData = {
         "Designed a barcode-based specimen traceability system for PCR testing, scaling throughput from under 300 to about 8,000 samples a day (~26x) during COVID-19; recognized in the Top 50 HIS-COVID Innovations 2021, a program supported by Vietnam's Ministry of Science and Technology.",
         "Cut diagnostic turnaround time by roughly 40% through workflow redesign, plate layout optimization, and quality-assurance monitoring during outbreak response.",
         "Performed diagnostic testing for provincial disease-control programs covering malaria, dengue, hepatitis, intestinal parasites, toxoplasmosis, toxocariasis, and measles, across molecular, microbiology, hematology, and biochemistry platforms.",
+        "Took part in routine field epidemiology work: community outbreak investigations, immunization campaigns, and field specimen collection for provincial surveillance.",
         "Trained junior laboratory personnel and used data analysis to manage specimen routing and daily operations.",
       ],
     },
