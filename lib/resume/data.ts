@@ -200,6 +200,73 @@ const cdcLabResume: ResumeData = {
   ],
 };
 
+// Tailored for Educato (YC S24) Full Stack Software Engineer — product-minded
+// engineer who built and operates an AI exam-prep platform end to end, with
+// LLM-evaluation background and public open-source shipped code. Lab/medical
+// history compressed into one systems-flavored entry.
+const educatoResume: ResumeData = {
+  ...defaultResume,
+  personal: {
+    ...defaultResume.personal,
+    title: "Full Stack Engineer — AI Learning Platforms",
+  },
+  summary:
+    "Product-minded full-stack engineer who built and operates hocvienai.help, an AI exam-prep learning platform with paying customers: Next.js/TypeScript frontend, API and database layer, auth, and LLM features end to end. LLM evaluation experience from a Google Gemini-related program at Turing, and public open-source work as the #3 contributor on a 1,000+ star Android SSH client. Strong TypeScript/React with production Vue 3 experience.",
+  experience: [
+    {
+      company: "ATP & Hoc Vien AI",
+      position: "Founder / Full-stack Engineer",
+      location: "Remote, Vietnam",
+      startDate: "2026",
+      endDate: "Present",
+      achievements: [
+        "Built hocvienai.help, an AI exam-prep LMS, end to end with Next.js and TypeScript: courses, lessons, quizzes, flashcards, and media decks served to real paying customers in production.",
+        "Integrated LLM features across the product: an embedded tutoring chatbot, AI-generated quizzes and flashcards by difficulty level, and an automated lesson media pipeline.",
+        "Automated student management: enrollment, role-based access via admin sessions and magic links, and Discord community integration (one course = one role = one forum).",
+        "Built multi-agent AI workflows connecting models with files, APIs, databases, and web systems; shipped a Vue 3 + Vite onboarding app to production on Cloudflare Pages.",
+      ],
+    },
+    {
+      company: "Haven (open source)",
+      position: "Contributor — #3 on the project's contribution graph",
+      location: "Remote",
+      startDate: "July 2026",
+      endDate: "August 2026",
+      achievements: [
+        "9 pull requests landed on main of a 1,032-star Android SSH/SFTP client (12 commits, +4,314/-106), including porting a floating text input from ConnectBot and fixing a silent-failure terminal bug the maintainer called \"clean work\".",
+        "Added test-retry infrastructure to cut down flaky upstream tests; one further fix for SSH session timeouts open for review.",
+      ],
+    },
+    {
+      company: "Turing",
+      position: "AI Quality Analyst (Personalization) — Gemini-related projects",
+      location: "Remote",
+      startDate: "April 2026",
+      endDate: "July 2026",
+      achievements: [
+        "Evaluated Vietnamese-language LLM outputs against quality rubrics, task guidelines, and data-security requirements for a Google Gemini-related program.",
+        "Worked 40 hours/week asynchronously with a US-based team across PST timezone overlap.",
+      ],
+    },
+    {
+      company: "Vinh Long Provincial CDC",
+      position: "Laboratory / Data Systems Specialist",
+      location: "Vinh Long, Vietnam",
+      startDate: "2021",
+      endDate: "2026",
+      achievements: [
+        "Designed and ran a barcode-based specimen traceability system for PCR testing, scaling throughput from under 300 to about 8,000 samples a day (~26x) and cutting turnaround time by roughly 40%; recognized in the Top 50 HIS-COVID Innovations 2021.",
+      ],
+    },
+  ],
+  skills: [
+    { category: "Frontend", items: ["TypeScript", "React", "Next.js", "Vue 3", "Vite", "Three.js"] },
+    { category: "Backend", items: ["Node.js", "API design", "SQL/Postgres", "Auth (sessions, magic links)"] },
+    { category: "AI/LLM", items: ["LLM product features", "Multi-agent workflows", "LLM evaluation", "MCP (Model Context Protocol)"] },
+    { category: "Infra", items: ["Linux", "Docker", "Vercel", "Cloudflare Pages", "Tailscale"] },
+  ],
+};
+
 export const resumes: Record<string, ResumeData> = {
   default: defaultResume,
   // Per-job variants live here. Each key becomes a clean URL at
@@ -207,6 +274,7 @@ export const resumes: Record<string, ResumeData> = {
   // so each variant can re-order/re-emphasize projects independently.
   "interview-resources": defaultResume,
   "cdc-lab-hcmc": cdcLabResume,
+  educato: educatoResume,
 };
 
 export const resumeData = resumes.default;
