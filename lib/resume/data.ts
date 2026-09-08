@@ -267,6 +267,216 @@ const educatoResume: ResumeData = {
   ],
 };
 
+// Tailored for TikTok "Brand Partnership Manager – Healthcare" (HCMC, Business
+// Development & Sales). Angle: healthcare commercial insider — 3 years selling
+// diagnostics to labs/hospitals, 5 years inside the public health system,
+// hospital data analysis (Power BI), and a paid AI-training product with real
+// customers. Same facts as profile.md, re-ordered; no ad/media claims.
+const tiktokHealthcareResume: ResumeData = {
+  ...defaultResume,
+  personal: {
+    ...defaultResume.personal,
+    title: "Healthcare Commercial & Data Professional",
+  },
+  summary:
+    "Healthcare commercial and data professional combining three years of customer-facing B2B sales to clinical laboratories and hospitals with five years inside Vietnam's public health system at the provincial CDC level. Analyzes clinical and operational data (Power BI, hospital data) and has driven adoption of a new workflow across a provincial health system under pandemic pressure, working with health authorities and government officials. Currently operates a commercial AI education platform with paying customers and trains government and business users in English and Vietnamese.",
+  experience: [
+    {
+      company: "Diagnostics distributors (multiple)",
+      position: "Sales Representative — Laboratory Consumables & Diagnostics Equipment",
+      location: "Mekong Delta, Vietnam",
+      startDate: "2015",
+      endDate: "2018",
+      achievements: [
+        "Customer-facing B2B sales of laboratory consumables and diagnostics equipment to hospitals and clinical laboratories across the Mekong Delta.",
+        "Built commercial relationships with clinical buyers, using technical insight gained while working in parallel as a part-time laboratory technician.",
+      ],
+    },
+    {
+      company: "Hoan My Cuu Long Hospital",
+      position: "Data Analyst (within the 2015–2018 period)",
+      location: "Can Tho, Vietnam",
+      startDate: "2015",
+      endDate: "2018",
+      achievements: [
+        "Hospital data analysis and Power BI reporting for clinical and administrative management.",
+      ],
+    },
+    {
+      company: "Vinh Long Provincial CDC",
+      position: "Laboratory / Diagnostics Specialist",
+      location: "Vinh Long, Vietnam",
+      startDate: "2021",
+      endDate: "May 2026",
+      achievements: [
+        "Drove adoption of a new workflow across a provincial health system under pandemic pressure: designed and implemented a barcode-based specimen traceability system that scaled PCR throughput from under 300 to about 4,000 samples a day (~13x) and cut turnaround time by roughly 40%; recognized in the Top 50 HIS-COVID Innovations 2021 (Vietnam Ministry of Science and Technology).",
+        "Maintains active working relationships with CDC Vinh Long and neighboring Mekong Delta CDCs — first-hand understanding of how public healthcare institutions evaluate, procure, and adopt new tools.",
+        "Performed diagnostics across hematology, microbiology, biochemistry, and molecular platforms; supported outbreak response; trained junior personnel.",
+      ],
+    },
+    {
+      company: "Vinh Long Department of Science and Technology",
+      position: "Specialist, Innovation and Startup Department — Innovation and Digital Transformation Center",
+      location: "Vinh Long, Vietnam",
+      startDate: "May 2026",
+      endDate: "Present",
+      achievements: [
+        "Design, implement, and teach digital-transformation and applied-AI training programs for government personnel — aligning stakeholders across provincial departments on technology adoption.",
+        "Advise local startups and SMBs on applying AI to operations through the official provincial innovation hub (SIHUB).",
+      ],
+    },
+    {
+      company: "ATP & Hoc Vien AI",
+      position: "Founder / Applied AI Systems Designer",
+      location: "Remote, Vietnam",
+      startDate: "2026",
+      endDate: "Present",
+      achievements: [
+        "Founded and operate hocvienai.help, a commercial AI learning platform with an integrated chatbot and automated student management, in use by real paying customers.",
+        "Train business owners and teams on AI fluency using official Anthropic Academy content (1:1 VIP intensive, small group, on-site), and design multi-agent workflows to automate business operations.",
+      ],
+    },
+    {
+      company: "Turing",
+      position: "AI Quality Analyst (Personalization) — Google Gemini-related program",
+      location: "Remote",
+      startDate: "April 2026",
+      endDate: "July 2026",
+      achievements: [
+        "Evaluated Vietnamese-language AI responses and personalization behavior against quality rubrics, task guidelines, and data-security requirements.",
+        "Worked 40 hours/week in English with a US-based team across PST timezone overlap.",
+      ],
+    },
+  ],
+  skills: [
+    { category: "Commercial", items: ["B2B healthcare sales", "Client relationship management", "Stakeholder engagement", "Training & enablement"] },
+    { category: "Data analysis", items: ["Power BI", "Advanced spreadsheets", "Databases", "LLM evaluation"] },
+    { category: "Healthcare domain", items: ["Clinical laboratory diagnostics", "Public health system (provincial CDC)", "PCR workflow design"] },
+    { category: "AI & web", items: ["Multi-agent orchestration", "MCP (Model Context Protocol)", "Next.js", "TypeScript"] },
+  ],
+  projects: [
+    {
+      title: "hocvienai.help",
+      role: "Founder / Full-stack",
+      period: "2026 – Present",
+      url: "https://hocvienai.help",
+      achievements: [
+        "AI learning platform with an integrated chatbot and automated student management, in active use by paying customers.",
+      ],
+    },
+  ],
+  certifications: [
+    "Certificate of Completion — Google Cloud Gen AI Academy APAC 2026, Cohort 3 (Hack2Skill)",
+  ],
+};
+
+// Tailored for Merck Healthcare "(Senior) Medical Advisor" (HCMC, Research &
+// Science). Angle: scientist-communicator in public health — MMedSc Kanazawa,
+// two peer-reviewed publications, five years of CDC diagnostics and epidemic
+// response, scientific training/education, international research and team
+// exposure. Sales 2015–2018 compressed to one customer-facing line. No pharma,
+// medical-affairs, or KOL-management claims.
+const merckMedicalAdvisorResume: ResumeData = {
+  ...defaultResume,
+  personal: {
+    ...defaultResume.personal,
+    title: "Medical Scientist · Public Health Diagnostics · Scientific Education",
+  },
+  summary:
+    "Medical scientist and public health professional with a Master of Medical Sciences (MMedSc) from Kanazawa University, Japan, a Bachelor of Medical Laboratory Science, and over five years of diagnostic, research, and epidemic-response experience at a provincial CDC. Two peer-reviewed international publications in preventive medicine (first-author, Obesity Science & Practice 2021; co-author, Journal of Pain Research 2020). Fluent English communicator who designs and delivers technical training for government officials and professionals, and has worked within international research and US-based teams.",
+  education: [
+    {
+      institution: "Kanazawa University, Japan",
+      degree: "Master of Medical Sciences (MMedSc) — Environmental and Preventive Medicine / Public Health",
+      location: "Kanazawa, Japan",
+      graduationYear: "2020",
+      startYear: "2018",
+      bullets: [
+        "Took part in health check-up data collection for two peer-reviewed studies, working in an international academic research environment.",
+        "First-author: Hara A., Nguyen M. Phat, et al. \"Effect of β3-adrenergic receptor gene polymorphism and lifestyle on overweight in Japanese rural residents.\" Obesity Science & Practice. 2021;8(2):199-207. doi:10.1002/osp4.560",
+        "Co-author: Suzuki K., Tsujiguchi H., Miyagi S., Nguyen M. Phat, et al. \"Association between serum 25-hydroxyvitamin D concentrations and chronic pain: Effects of drinking habits.\" Journal of Pain Research. 2020;13:2987-2996. doi:10.2147/JPR.S277979",
+      ],
+    },
+    {
+      institution: "Can Tho University of Medicine and Pharmacy, Vietnam",
+      degree: "Bachelor of Medical Laboratory Science",
+      location: "Can Tho, Vietnam",
+      graduationYear: "2015",
+      startYear: "2011",
+    },
+  ],
+  experience: [
+    {
+      company: "Vinh Long Provincial CDC",
+      position: "Laboratory / Diagnostics Specialist",
+      location: "Vinh Long, Vietnam",
+      startDate: "2021",
+      endDate: "May 2026",
+      achievements: [
+        "Designed and implemented a barcode-based specimen traceability system for high-volume PCR testing, scaling throughput from under 300 to about 4,000 samples a day (~13x) and reducing turnaround time by roughly 40%; adopted across the provincial health system during the COVID-19 peak and recognized in the Top 50 HIS-COVID Innovations 2021 (Vietnam Ministry of Science and Technology).",
+        "Performed diagnostics across molecular, microbiology, hematology, and biochemistry platforms for provincial disease-control programs (malaria, dengue, hepatitis, intestinal parasites, toxoplasmosis, toxocariasis, measles); supported outbreak response and field specimen collection for provincial surveillance.",
+        "Trained junior laboratory personnel on quality assurance; took part in community outbreak investigations and immunization campaigns; maintains active working relationships with CDC Vinh Long and neighboring Mekong Delta CDCs.",
+      ],
+    },
+    {
+      company: "Vinh Long Department of Science and Technology",
+      position: "Specialist, Innovation and Startup Department — Innovation and Digital Transformation Center",
+      location: "Vinh Long, Vietnam",
+      startDate: "May 2026",
+      endDate: "Present",
+      achievements: [
+        "Design, implement, and teach digital-transformation and applied-AI training programs for provincial government personnel, with scientific and technical accuracy for a non-specialist audience.",
+        "Provide technical support to local startups and SMBs adopting digital and AI tools through the official provincial innovation hub (SIHUB).",
+      ],
+    },
+    {
+      company: "ATP & Hoc Vien AI",
+      position: "Founder / Trainer — Applied AI Systems",
+      location: "Remote, Vietnam",
+      startDate: "2026",
+      endDate: "Present",
+      achievements: [
+        "Deliver structured technical education to business users using official Anthropic Academy content (1:1 VIP intensive, small group, on-site).",
+        "Built and operate hocvienai.help, an AI learning platform with automated student management, in use by paying customers.",
+      ],
+    },
+    {
+      company: "Turing",
+      position: "AI Quality Analyst (Personalization) — Google Gemini-related program",
+      location: "Remote",
+      startDate: "April 2026",
+      endDate: "July 2026",
+      achievements: [
+        "Evaluated Vietnamese-language AI responses against quality rubrics, task guidelines, and data-security requirements.",
+        "Worked 40 hours/week in English with a US-based team across PST timezone overlap.",
+      ],
+    },
+    {
+      company: "Diagnostics distributors (multiple) · Hoan My Cuu Long Hospital",
+      position: "Diagnostics industry experience (customer-facing) · Hospital data analysis",
+      location: "Mekong Delta, Vietnam",
+      startDate: "2015",
+      endDate: "2018",
+      achievements: [
+        "Customer-facing sales of laboratory consumables and diagnostics equipment to clinical laboratories; part-time laboratory technician in parallel; hospital data analysis using Power BI at Hoan My Cuu Long Hospital.",
+      ],
+    },
+  ],
+  skills: [
+    { category: "Scientific", items: ["Molecular & clinical diagnostics", "PCR workflow design", "Quality assurance", "Epidemiology fieldwork"] },
+    { category: "Education & communication", items: ["Training design & delivery", "Scientific writing (peer-reviewed)", "Fluent English", "Stakeholder engagement (public sector)"] },
+    { category: "Data & AI", items: ["Power BI", "LLM evaluation", "Workflow automation", "Databases"] },
+  ],
+  projects: [],
+  codingProfiles: [],
+  certifications: [
+    "Certificate of Completion — Google Cloud Gen AI Academy APAC 2026, Cohort 3 (Hack2Skill)",
+  ],
+  achievements: [
+    "Top 50 HIS-COVID Innovations 2021 — Vietnam Ministry of Science and Technology (Entry No. 9)",
+  ],
+};
+
 export const resumes: Record<string, ResumeData> = {
   default: defaultResume,
   // Per-job variants live here. Each key becomes a clean URL at
@@ -275,6 +485,8 @@ export const resumes: Record<string, ResumeData> = {
   "interview-resources": defaultResume,
   "cdc-lab-hcmc": cdcLabResume,
   educato: educatoResume,
+  "tiktok-healthcare": tiktokHealthcareResume,
+  "merck-medical-advisor": merckMedicalAdvisorResume,
 };
 
 export const resumeData = resumes.default;
