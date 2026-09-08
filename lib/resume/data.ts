@@ -480,6 +480,83 @@ const merckMedicalAdvisorResume: ResumeData = {
   ],
 };
 
+// Tailored for MIMS Pte Ltd "Medical & Society Engagement Manager" (HCMC).
+// Angle: medical professional with an active Mekong Delta public-health
+// network, education-program design/delivery, and a research background.
+// Same profile.md facts; no CME / event-management / pharma claims.
+const medicalEngagementResume: ResumeData = {
+  ...merckMedicalAdvisorResume,
+  personal: {
+    ...defaultResume.personal,
+    title: "Medical Scientist · Healthcare Education & Stakeholder Engagement",
+  },
+  summary:
+    "Medical scientist and public health professional with a Master of Medical Sciences from Kanazawa University, Japan, two peer-reviewed publications, and an active working network across CDC Vinh Long and neighboring Mekong Delta CDCs. Designs and delivers training programs for provincial government personnel, business teams, and laboratory staff, and has driven adoption of a new barcode-based workflow across a provincial health system under pandemic pressure. Earlier customer-facing experience selling diagnostics to hospitals and clinical laboratories across the Mekong Delta.",
+  experience: [
+    {
+      company: "Vinh Long Provincial CDC",
+      position: "Laboratory / Diagnostics Specialist",
+      location: "Vinh Long, Vietnam",
+      startDate: "2021",
+      endDate: "May 2026",
+      achievements: [
+        "Maintains active working relationships with CDC Vinh Long and neighboring Mekong Delta CDCs — a live channel into the region's preventive-health system; took part in community outbreak investigations, immunization campaigns, and field specimen collection.",
+        "Drove adoption of a new barcode-based specimen traceability workflow across the provincial health system under pandemic pressure: PCR throughput scaled from under 300 to about 4,000 samples a day (~13x), turnaround time cut by roughly 40%; recognized in the Top 50 HIS-COVID Innovations 2021 (Vietnam Ministry of Science and Technology).",
+        "Performed diagnostics across molecular, microbiology, hematology, and biochemistry platforms for provincial disease-control programs; designed and delivered quality-assurance training for junior laboratory personnel.",
+      ],
+    },
+    {
+      company: "Vinh Long Department of Science and Technology",
+      position: "Specialist, Innovation and Startup Department — Innovation and Digital Transformation Center",
+      location: "Vinh Long, Vietnam",
+      startDate: "May 2026",
+      endDate: "Present",
+      achievements: [
+        "Design, implement, and teach digital-transformation and applied-AI training programs for provincial government officials, aligning stakeholders across public departments on technology adoption.",
+        "Support local startups and SMBs adopting digital and AI tools through the official provincial innovation hub (SIHUB).",
+      ],
+    },
+    {
+      company: "ATP & Hoc Vien AI",
+      position: "Founder / Trainer — Applied AI Systems",
+      location: "Remote, Vietnam",
+      startDate: "2026",
+      endDate: "Present",
+      achievements: [
+        "Deliver training programs to business owners and teams using official Anthropic Academy content (Claude 101, AI Fluency Framework, MCP, Multi-Agent Systems) in 1:1 intensive, small-group, and on-site formats.",
+        "Founded and operate hocvienai.help, a learning platform with an integrated AI chatbot and automated student management, serving paying customers.",
+      ],
+    },
+    {
+      company: "Diagnostics distributors (multiple)",
+      position: "Sales Representative — Laboratory Consumables & Diagnostics Equipment",
+      location: "Mekong Delta, Vietnam",
+      startDate: "2015",
+      endDate: "2018",
+      achievements: [
+        "Built commercial relationships with hospital and clinical laboratory customers across the Mekong Delta; used a medical laboratory background to understand buyer needs, while working in parallel as a part-time laboratory technician.",
+        "Hospital data analysis using Power BI at Hoan My Cuu Long Hospital within the same period.",
+      ],
+    },
+    {
+      company: "Turing",
+      position: "AI Quality Analyst (Personalization) — Google Gemini-related program",
+      location: "Remote",
+      startDate: "April 2026",
+      endDate: "July 2026",
+      achievements: [
+        "Evaluated Vietnamese-language AI responses against quality rubrics and data-security requirements, working 40 hours/week in English with a US-based team across PST timezone overlap.",
+      ],
+    },
+  ],
+  skills: [
+    { category: "Health-system engagement", items: ["Provincial CDC network (Mekong Delta)", "Public-sector stakeholder alignment", "Hospital & laboratory customer relationships"] },
+    { category: "Education & communication", items: ["Training program design & delivery", "Scientific writing (peer-reviewed)", "Fluent English"] },
+    { category: "Scientific", items: ["Molecular & clinical diagnostics", "PCR workflow design", "Quality assurance", "Epidemiology fieldwork"] },
+    { category: "Data & AI", items: ["Power BI", "LLM evaluation", "Workflow automation"] },
+  ],
+};
+
 export const resumes: Record<string, ResumeData> = {
   default: defaultResume,
   // Per-job variants live here. Each key becomes a clean URL at
@@ -490,6 +567,7 @@ export const resumes: Record<string, ResumeData> = {
   educato: educatoResume,
   "tiktok-healthcare": tiktokHealthcareResume,
   "merck-medical-advisor": merckMedicalAdvisorResume,
+  "medical-engagement": medicalEngagementResume,
 };
 
 export const resumeData = resumes.default;
