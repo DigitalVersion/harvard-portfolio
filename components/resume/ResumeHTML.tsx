@@ -221,6 +221,7 @@ export default function ResumeHTML({ data, origin = "" }: ResumeHTMLProps) {
       </section>
 
       {/* Projects Section */}
+      {data.projects.length > 0 && (
       <section className="mb-4">
         <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-900 pb-1 mb-2">
           Projects
@@ -265,6 +266,7 @@ export default function ResumeHTML({ data, origin = "" }: ResumeHTMLProps) {
           );
         })}
       </section>
+      )}
 
       {/* Technical Skills Section */}
       <section className="mb-4">

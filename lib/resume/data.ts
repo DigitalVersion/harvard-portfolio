@@ -278,6 +278,9 @@ const tiktokHealthcareResume: ResumeData = {
     ...defaultResume.personal,
     title: "Healthcare Commercial & Data Professional",
   },
+  education: defaultResume.education.map((e) =>
+    e.degree === "Bachelor of Laboratory Science" ? { ...e, degree: "Bachelor of Medical Laboratory Science" } : e,
+  ),
   summary:
     "Healthcare commercial and data professional combining three years of customer-facing B2B sales to clinical laboratories and hospitals with five years inside Vietnam's public health system at the provincial CDC level. Analyzes clinical and operational data (Power BI, hospital data) and has driven adoption of a new workflow across a provincial health system under pandemic pressure, working with health authorities and government officials. Currently operates a commercial AI education platform with paying customers and trains government and business users in English and Vietnamese.",
   experience: [

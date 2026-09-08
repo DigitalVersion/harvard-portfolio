@@ -467,6 +467,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
       </View>
 
       {/* Projects Section */}
+      {data.projects.length > 0 && (
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Projects</Text>
         {data.projects.map((project, index) => {
@@ -511,6 +512,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
           );
         })}
       </View>
+      )}
 
       {/* Skills Section */}
       <View style={styles.section}>
