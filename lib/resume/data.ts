@@ -557,6 +557,122 @@ const medicalEngagementResume: ResumeData = {
   ],
 };
 
+// Tailored for Pacific Informatics (Zymo Research's Vietnam subsidiary)
+// "Business Development Specialist / Bioinformatics Solution" (HCMC, Hybrid,
+// Mid-Senior). The posting had no JD; tailored to the company's business:
+// bioinformatics/NGS data-analysis services + Zymo kits/reagents sold to labs,
+// hospitals, institutes, genomics companies. Angle: has been both the customer
+// and the seller in the Vietnamese lab market — 2015–18 B2B diagnostics sales,
+// 5 years as a daily kit/reagent user inside a CDC molecular lab who built the
+// lab's own PCR data pipeline (~4,000 samples/day), plus Python/TypeScript/SQL
+// and a first-author genetic-association paper. Prose via /nha-van (NotebookLM)
+// + humanizer pass. No claims of selling bioinformatics/NGS products, NGS
+// wet-lab, or oncology experience.
+const bioinformaticsBdResume: ResumeData = {
+  ...defaultResume,
+  personal: {
+    ...defaultResume.personal,
+    title: "Bioinformatics & Diagnostics Business Development · Lab Scientist with Data Engineering Background",
+  },
+  summary:
+    "Brings experience from both sides of the Vietnamese laboratory market: sold laboratory consumables and diagnostics equipment to hospitals and clinical labs across the Mekong Delta (2015–2018), then spent five years as a daily user of extraction kits and PCR reagents inside a provincial CDC molecular diagnostics lab. Built that lab's data pipeline — barcode traceability from collection to PCR result to provincial report, handling ~4,000 samples a day — and now works in Python, TypeScript, SQL, and AI systems, so can speak with both lab buyers and a bioinformatics team. Holds an MSc from Kanazawa University and a first-author genetic-association paper (β3-adrenergic receptor polymorphism), enough to hold a genomics conversation with scientists. Backed by an active network of CDC, hospital, and laboratory contacts across the Mekong Delta.",
+  education: [
+    {
+      institution: "Kanazawa University, Japan",
+      degree: "Master of Medical Sciences (MMedSc) — Environmental and Preventive Medicine / Public Health",
+      location: "Kanazawa, Japan",
+      graduationYear: "2020",
+      startYear: "2018",
+      bullets: [
+        "Coursework and research in English; field data collection and statistical analysis for two published epidemiological studies.",
+        "First-author: Hara A., Nguyen M. Phat, et al. \"Effect of β3-adrenergic receptor gene polymorphism and lifestyle on overweight in Japanese rural residents.\" Obesity Science & Practice. 2021;8(2):199-207. doi:10.1002/osp4.560 (ADRB3 Trp64Arg genotyping, n=600, multivariable logistic regression)",
+        "Co-author: Suzuki K., Tsujiguchi H., Miyagi S., Nguyen M. Phat, et al. \"Association between serum 25-hydroxyvitamin D concentrations and chronic pain: Effects of drinking habits.\" Journal of Pain Research. 2020;13:2987-2996. doi:10.2147/JPR.S277979",
+      ],
+    },
+    {
+      institution: "Can Tho University of Medicine and Pharmacy, Vietnam",
+      degree: "Bachelor of Medical Laboratory Science",
+      location: "Can Tho, Vietnam",
+      graduationYear: "2015",
+      startYear: "2011",
+    },
+  ],
+  experience: [
+    {
+      company: "Diagnostics distributors (multiple)",
+      position: "Sales Representative — Laboratory Consumables & Diagnostics Equipment",
+      location: "Mekong Delta, Vietnam",
+      startDate: "2015",
+      endDate: "2018",
+      achievements: [
+        "Handled customer-facing B2B sales of laboratory consumables and diagnostics equipment to hospitals and clinical laboratories throughout the Mekong Delta.",
+        "Built relationships with clinical buyers, including lab heads and hospital purchasing, using technical insight from parallel part-time work as a laboratory technician to understand how labs evaluate and buy kits and instruments.",
+        "Conducted hospital data analysis and Power BI reporting at Hoan My Cuu Long Hospital within the same period to support clinical and administrative management.",
+      ],
+    },
+    {
+      company: "Vinh Long Provincial CDC",
+      position: "Laboratory / Diagnostics Specialist (Medical Laboratory Technologist)",
+      location: "Vinh Long, Vietnam",
+      startDate: "May 2021",
+      endDate: "Apr 2026",
+      achievements: [
+        "Served as a daily buyer-side user of extraction kits and PCR reagents for molecular diagnostics (qPCR/RT-PCR for SARS-CoV-2, hepatitis, intestinal parasites, toxoplasmosis, toxocariasis) and hematology, microbiology, and biochemistry platforms; biosafety certificate, Pasteur Institute (2021).",
+        "Designed and built a barcode-based specimen traceability and reporting pipeline (collection → PCR result → provincial case report) replacing handwritten transcription, scaling daily PCR throughput from under 300 to ~4,000 samples (~13x) and cutting turnaround ~40% through workflow and 96-well plate-layout redesign; migrated label printing from BarTender to open-source OpenLabel, still in production; recognized in the Top 50 HIS-COVID Innovations 2021 (Vietnam Ministry of Science and Technology).",
+        "Worked daily with clinicians, epidemiologists, and public health officers on outbreak investigations and field specimen collection across the province, while training junior laboratory staff on diagnostic protocols and quality standards.",
+        "Maintains active working relationships with CDC Vinh Long and neighboring Mekong Delta CDCs, with first-hand knowledge of how public health laboratories evaluate, procure, and adopt new diagnostic tools.",
+      ],
+    },
+    {
+      company: "Vinh Long Department of Science and Technology",
+      position: "Specialist, Innovation and Digital Transformation Center",
+      location: "Vinh Long, Vietnam",
+      startDate: "May 2026",
+      endDate: "Present",
+      achievements: [
+        "Designs and delivers digital-transformation and applied-AI training programs for government agencies, covering program planning, budgeting, monitoring, and reporting.",
+        "Supports local startups and SMBs adopting AI through the provincial innovation hub (SIHUB).",
+      ],
+    },
+    {
+      company: "ATP & Hoc Vien AI",
+      position: "Founder / Full-stack Engineer",
+      location: "Remote, Vietnam",
+      startDate: "2026",
+      endDate: "Present",
+      achievements: [
+        "Built and operates hocvienai.help, a Next.js/TypeScript + Postgres learning platform with LLM features (chatbot, generated quizzes and flashcards), used by paying customers.",
+        "Builds multi-agent AI workflows connecting LLMs to files, APIs, and databases via MCP (Model Context Protocol).",
+      ],
+    },
+    {
+      company: "Turing",
+      position: "AI Quality Analyst (Personalization) — Google Gemini-related program",
+      location: "Remote",
+      startDate: "April 2026",
+      endDate: "July 2026",
+      achievements: [
+        "Rubric-based evaluation of Vietnamese LLM outputs under quality and data-security requirements, working 40 hours/week in English with a US-based (PST) team.",
+      ],
+    },
+  ],
+  skills: [
+    { category: "Commercial (lab market)", items: ["B2B sales to hospitals & clinical labs", "Client relationship management", "Public-sector stakeholder engagement", "Training & enablement", "Fluent English"] },
+    { category: "Molecular & clinical diagnostics", items: ["qPCR/RT-PCR", "DNA/RNA extraction workflows", "SNP genotyping (research)", "Biosafety", "Quality assurance"] },
+    { category: "Data & software", items: ["Python", "TypeScript/Node.js", "SQL/Postgres", "Power BI", "Multivariable regression / epidemiological analysis", "Linux, Docker, Git"] },
+    { category: "AI/LLM", items: ["Multi-agent orchestration", "MCP", "RAG", "LLM evaluation"] },
+  ],
+  projects: [],
+  codingProfiles: [],
+  certifications: [
+    "Certificate of Completion — Google Cloud Gen AI Academy APAC 2026, Cohort 3 (Hack2Skill)",
+    "Biosafety certificate — Pasteur Institute (2021)",
+  ],
+  achievements: [
+    "Top 50 HIS-COVID Innovations 2021 — Vietnam Ministry of Science and Technology (Entry No. 9)",
+  ],
+};
+
 export const resumes: Record<string, ResumeData> = {
   default: defaultResume,
   // Per-job variants live here. Each key becomes a clean URL at
@@ -568,6 +684,7 @@ export const resumes: Record<string, ResumeData> = {
   "tiktok-healthcare": tiktokHealthcareResume,
   "merck-medical-advisor": merckMedicalAdvisorResume,
   "medical-engagement": medicalEngagementResume,
+  "bioinformatics-bd": bioinformaticsBdResume,
 };
 
 export const resumeData = resumes.default;
