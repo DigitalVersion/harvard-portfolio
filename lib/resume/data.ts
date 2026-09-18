@@ -909,6 +909,124 @@ const molecularResearcherResume: ResumeData = {
   ],
 };
 
+// BioTuring — Product Specialist / Biology Track (BIO Future "Coming Home"),
+// HCMC on-site. Ordered to mirror the JD's own responsibility list: product
+// expertise, technical subject matter expert, demos & client training,
+// translating user feedback, documentation & QA, roadmap, staying current.
+// Honesty constraints: no NGS/single-cell/spatial analysis claims, no cell
+// culture, throughput figure is ~4,000/day.
+const bioturingProductSpecialistResume: ResumeData = {
+  ...molecularResearcherResume,
+  personal: {
+    ...molecularResearcherResume.personal,
+    title: "Bioinformatics Product Specialist · Molecular Scientist × Technical Trainer × Data Builder",
+  },
+  summary:
+    "Molecular scientist who now teaches software for a living, which is the combination a product specialist role asks for: an MMedSc from Kanazawa University plus a first-author gene-polymorphism paper give the vocabulary to act as a technical subject matter expert with researchers, and five years of molecular diagnostics at a provincial CDC mean the people on the other end of a demo are former colleagues. Currently designs and personally delivers digital-transformation and applied-AI training for government staff and companies, using official Anthropic Academy content in 1:1, small-group, and on-site formats, so product demos and client training are the day job rather than a stretch. On the product side, ran rubric-based quality evaluation of AI outputs for a Google Gemini-related program at Turing, which is hands-on QA and criteria writing, and built a barcode specimen data pipeline that carried a CDC lab from under 300 to about 4,000 PCR samples a day with turnaround down about 40 percent. That mix is deliberately academic and industrial at once: international publications, a system still running in public health, and software with paying customers.",
+  education: molecularResearcherResume.education,
+  experience: [
+    {
+      company: "Vinh Long Department of Science and Technology",
+      position: "Specialist, Innovation and Digital Transformation Center",
+      location: "Vinh Long, Vietnam",
+      startDate: "May 2026",
+      endDate: "Present",
+      achievements: [
+        "Designs and personally teaches training programmes on digital transformation and applied AI for government staff, covering curriculum design, live delivery, and hands-on implementation support afterwards.",
+        "Delivers structured technical education to business owners and teams using official Anthropic Academy content (Claude 101, AI Fluency Framework, MCP, Multi-Agent Systems, Claude Code) in 1:1 VIP intensive, small-group, and on-site formats.",
+        "Built and operates hocvienai.help, an AI learning platform with an integrated chatbot and automated student management, in use by real paying customers.",
+        "Explains technical progress to non-specialist stakeholders and keeps an active working relationship with the provincial CDC and neighbouring Mekong Delta preventive-medicine units.",
+      ],
+    },
+    {
+      company: "Turing",
+      position: "AI Quality Analyst — Google Gemini-related programme",
+      location: "Remote",
+      startDate: "April 2026",
+      endDate: "July 2026",
+      achievements: [
+        "Ran rubric-based evaluation of AI outputs against Google's quality standards and data-security requirements, which is quality assurance work plus writing and applying the evaluation criteria themselves.",
+        "Worked 40 hours a week in English with a US-based team, reporting defects and edge cases in a form the product side could act on.",
+      ],
+    },
+    {
+      company: "Vinh Long Provincial CDC",
+      position: "Laboratory / Diagnostics Specialist (Molecular Diagnostics)",
+      location: "Vinh Long, Vietnam",
+      startDate: "2021",
+      endDate: "May 2026",
+      achievements: [
+        "Designed and built a barcode specimen traceability system and data pipeline from collection to PCR result to provincial report, taking daily throughput from under 300 to about 4,000 samples (roughly 13x) and cutting turnaround time about 40 percent; recognised in the Top 50 HIS-COVID Innovations 2021 by Vietnam's Ministry of Science and Technology.",
+        "Ran real-time PCR and RT-PCR for SARS-CoV-2 plus a diagnostic menu of hepatitis, intestinal parasites, and toxocariasis, so knows from the inside how a laboratory's workflow and data actually behave and who the end user of laboratory software is.",
+        "Helped commission the new BSL-2 molecular laboratory in 2021, installing the real-time PCR system, automated nucleic-acid extractor, and biosafety cabinet, and drafting the SOPs that went with them.",
+        "Trained junior laboratory staff and front-line health workers on specimen collection protocols and quality standards, and formulated in-house PCR positive controls.",
+        "Worked daily with clinicians and epidemiologists on outbreak investigations and field specimen collection.",
+      ],
+    },
+    {
+      company: "Diagnostics distributors (multiple)",
+      position: "Sales Representative — Laboratory Consumables & Diagnostics Equipment",
+      location: "Mekong Delta, Vietnam",
+      startDate: "2015",
+      endDate: "2018",
+      achievements: [
+        "Sold laboratory consumables and diagnostics equipment B2B to hospitals and clinical laboratories across the Mekong Delta, giving technical answers and product consultation in front of the customer.",
+        "Built relationships with laboratory heads and hospital purchasing departments, with technical credibility from parallel part-time work as a laboratory technician.",
+      ],
+    },
+  ],
+  skills: [
+    {
+      category: "Scientific & molecular",
+      items: [
+        "Human genetics / gene-polymorphism association studies (first-author publication)",
+        "Real-time PCR / RT-PCR",
+        "Nucleic-acid extraction (manual & automated)",
+        "Molecular diagnostics workflows",
+        "Research data collection (health check-up cohort)",
+        "Statistical analysis",
+        "Reading & interpreting primary scientific literature",
+        "BSL-2 biosafety",
+      ],
+    },
+    {
+      category: "Software & data",
+      items: [
+        "Python",
+        "TypeScript",
+        "SQL",
+        "Bash",
+        "Barcode traceability & LIS-style data pipelines",
+        "Power BI",
+        "Google Sheets / Apps Script",
+        "Multi-agent AI systems, MCP, LLM evaluation",
+        "Linux, Git",
+      ],
+    },
+    {
+      category: "Training, demo & documentation",
+      items: [
+        "Product demos & client training",
+        "Curriculum design and live teaching (1:1, small group, on-site)",
+        "Official Anthropic Academy instructor content",
+        "SOP and technical documentation writing",
+        "Rubric-based QA and evaluation criteria",
+        "Gathering user feedback and turning it into actionable requirements",
+        "Fluent working English",
+        "Vietnamese citizen, available on-site in HCMC",
+      ],
+    },
+  ],
+  projects: [],
+  codingProfiles: [],
+  certifications: [
+    "Certificate of Completion — Google Cloud Gen AI Academy APAC 2026, Cohort 3 (Hack2Skill), cert ID 2026H2S09GCGENAIAPACC3-P00400",
+    "Biosafety certificate — Pasteur Institute (2021)",
+    "ORCID: 0000-0002-2706-9572",
+  ],
+  achievements: molecularResearcherResume.achievements,
+};
+
 export const resumes: Record<string, ResumeData> = {
   default: defaultResume,
   // Per-job variants live here. Each key becomes a clean URL at
@@ -923,6 +1041,7 @@ export const resumes: Record<string, ResumeData> = {
   "bioinformatics-bd": bioinformaticsBdResume,
   "pacific-informatics": pacificInformaticsResume,
   "molecular-researcher": molecularResearcherResume,
+  "bioturing-product-specialist": bioturingProductSpecialistResume,
 };
 
 export const resumeData = resumes.default;
