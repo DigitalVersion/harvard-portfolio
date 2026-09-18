@@ -922,7 +922,7 @@ const bioturingProductSpecialistResume: ResumeData = {
     title: "Bioinformatics Product Specialist · Molecular Scientist × Technical Trainer × Data Builder",
   },
   summary:
-    "Molecular scientist who now teaches software for a living, which is the combination a product specialist role asks for: an MMedSc from Kanazawa University plus a first-author gene-polymorphism paper give the vocabulary to act as a technical subject matter expert with researchers, and five years of molecular diagnostics at a provincial CDC mean the people on the other end of a demo are former colleagues. Currently designs and personally delivers digital-transformation and applied-AI training for government staff and companies, using official Anthropic Academy content in 1:1, small-group, and on-site formats, so product demos and client training are the day job rather than a stretch. On the product side, ran rubric-based quality evaluation of AI outputs for a Google Gemini-related program at Turing, which is hands-on QA and criteria writing, and built a barcode specimen data pipeline that carried a CDC lab from under 300 to about 4,000 PCR samples a day with turnaround down about 40 percent. That mix is deliberately academic and industrial at once: international publications, a system still running in public health, and software with paying customers.",
+    "Molecular scientist who now teaches software for a living. An MMedSc from Kanazawa University and a first-author gene-polymorphism paper support the technical subject matter expert role with researchers. Five years of molecular diagnostics at a provincial CDC make a demo audience of former colleagues. Designs and personally delivers applied-AI training today using official Anthropic Academy content. Product demos and customer training are already the day job. Rubric-based evaluation of AI outputs at Turing is hands-on QA plus criteria writing. A barcode data pipeline took a CDC lab from under 300 to about 4,000 PCR samples a day. Turnaround time fell about 40 percent.",
   education: molecularResearcherResume.education,
   experience: [
     {
@@ -932,10 +932,10 @@ const bioturingProductSpecialistResume: ResumeData = {
       startDate: "May 2026",
       endDate: "Present",
       achievements: [
-        "Designs and personally teaches training programmes on digital transformation and applied AI for government staff, covering curriculum design, live delivery, and hands-on implementation support afterwards.",
-        "Delivers structured technical education to business owners and teams using official Anthropic Academy content (Claude 101, AI Fluency Framework, MCP, Multi-Agent Systems, Claude Code) in 1:1 VIP intensive, small-group, and on-site formats.",
-        "Built and operates hocvienai.help, an AI learning platform with an integrated chatbot and automated student management, in use by real paying customers.",
-        "Explains technical progress to non-specialist stakeholders and keeps an active working relationship with the provincial CDC and neighbouring Mekong Delta preventive-medicine units.",
+        "Designs and teaches digital transformation and applied AI for government staff. Covers curriculum design, live delivery and follow-up implementation support.",
+        "Teaches business owners and teams using official Anthropic Academy content (Claude 101, AI Fluency Framework, MCP, Multi-Agent Systems, Claude Code) in 1:1 VIP intensive, small-group and on-site formats.",
+        "Built and operates hocvienai.help, an AI learning platform with paying students. Runs an integrated chatbot and automated student management.",
+        "Explains technical progress to non-specialist stakeholders. Maintains working relationships with the provincial CDC and neighbouring Mekong Delta preventive-medicine units.",
       ],
     },
     {
@@ -945,8 +945,8 @@ const bioturingProductSpecialistResume: ResumeData = {
       startDate: "April 2026",
       endDate: "July 2026",
       achievements: [
-        "Ran rubric-based evaluation of AI outputs against Google's quality standards and data-security requirements, which is quality assurance work plus writing and applying the evaluation criteria themselves.",
-        "Worked 40 hours a week in English with a US-based team, reporting defects and edge cases in a form the product side could act on.",
+        "Scored AI outputs against rubrics, applying Google's quality and data-security standards. Wrote the evaluation criteria as well as applying them.",
+        "Worked 40 hours a week in English with a US-based team. Reported defects and edge cases in a form the product side could act on.",
       ],
     },
     {
@@ -956,11 +956,11 @@ const bioturingProductSpecialistResume: ResumeData = {
       startDate: "2021",
       endDate: "May 2026",
       achievements: [
-        "Designed and built a barcode specimen traceability system and data pipeline from collection to PCR result to provincial report, taking daily throughput from under 300 to about 4,000 samples (roughly 13x) and cutting turnaround time about 40 percent; recognised in the Top 50 HIS-COVID Innovations 2021 by Vietnam's Ministry of Science and Technology.",
-        "Ran real-time PCR and RT-PCR for SARS-CoV-2 plus a diagnostic menu of hepatitis, intestinal parasites, and toxocariasis, so knows from the inside how a laboratory's workflow and data actually behave and who the end user of laboratory software is.",
-        "Helped commission the new BSL-2 molecular laboratory in 2021, installing the real-time PCR system, automated nucleic-acid extractor, and biosafety cabinet, and drafting the SOPs that went with them.",
-        "Trained junior laboratory staff and front-line health workers on specimen collection protocols and quality standards, and formulated in-house PCR positive controls.",
-        "Worked daily with clinicians and epidemiologists on outbreak investigations and field specimen collection.",
+        "Built a barcode specimen traceability system and data pipeline, from collection to PCR result to provincial report. Scaled daily throughput from under 300 to about 4,000 samples, roughly 13x, and cut turnaround time about 40 percent. Recognised in the Top 50 HIS-COVID Innovations 2021 by Vietnam's Ministry of Science and Technology.",
+        "Ran real-time PCR and RT-PCR for SARS-CoV-2, hepatitis, intestinal parasites and toxocariasis. That bench work shows how a laboratory's workflow and data actually behave. It also identifies who the end user of laboratory software is.",
+        "Helped commission the new BSL-2 molecular laboratory in 2021. Installed the real-time PCR system, automated nucleic-acid extractor and biosafety cabinet. Drafted the SOPs that went with them.",
+        "Trained junior laboratory staff and front-line health workers on specimen collection protocols and quality standards. Formulated in-house PCR positive controls.",
+        "Worked daily with clinicians and epidemiologists on outbreak investigations. Collected field specimens across outbreak areas.",
       ],
     },
     {
@@ -970,8 +970,8 @@ const bioturingProductSpecialistResume: ResumeData = {
       startDate: "2015",
       endDate: "2018",
       achievements: [
-        "Sold laboratory consumables and diagnostics equipment B2B to hospitals and clinical laboratories across the Mekong Delta, giving technical answers and product consultation in front of the customer.",
-        "Built relationships with laboratory heads and hospital purchasing departments, with technical credibility from parallel part-time work as a laboratory technician.",
+        "Sold laboratory consumables and diagnostics equipment B2B to hospitals and clinical laboratories across the Mekong Delta. Provided technical answers and product consultation in front of the customer.",
+        "Built relationships with laboratory heads and hospital purchasing departments. Gained technical credibility from parallel part-time work as a laboratory technician.",
       ],
     },
   ],
