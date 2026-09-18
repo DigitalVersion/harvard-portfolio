@@ -789,6 +789,136 @@ const pacificInformaticsResume: ResumeData = {
   ],
 };
 
+// Tailored for "Associate Researcher (Molecular biology / genetics / cell biology)"
+// at a biotech company in HCMC (stem-cell / EV longevity field). Built on
+// cdcLabResume. Emphasis follows the JD's own order of responsibilities:
+// research data + publication first, then molecular lab, then coordination and
+// training. Honesty gates: no cell-culture / stem-cell / EV / exosome claims
+// (real gap, left empty), no clinical-trial management claim, degree stays
+// MMedSc, throughput figure is ~4,000/day.
+const molecularResearcherResume: ResumeData = {
+  ...defaultResume,
+  personal: {
+    ...defaultResume.personal,
+    title: "Molecular Laboratory Scientist · Research Data & Publication",
+  },
+  summary:
+    "Brings five years of molecular diagnostics experience at a provincial CDC alongside an MMedSc from Kanazawa University with two peer-reviewed international publications, including a first-author gene-polymorphism study. Performed hands-on collection of health check-up research data behind those publications. Built barcode-based data pipelines that took PCR throughput from under 300 to about 4,000 samples a day while cutting turnaround about 40 percent. Strengths sit in molecular laboratory work, research data, and publication.",
+  education: [
+    {
+      institution: "Kanazawa University, Japan",
+      degree: "Master of Medical Sciences (MMedSc) — Environmental and Preventive Medicine",
+      location: "Kanazawa, Japan",
+      startYear: "2018",
+      graduationYear: "2020",
+      bullets: [
+        "Took part in field collection of health check-up data in a Japanese rural cohort, establishing the dataset behind two peer-reviewed publications, and contributed to data compilation, statistical analysis, and manuscript preparation as first author on one of them.",
+        "Completed degree taught entirely in English, with the first-author work being a gene-polymorphism and lifestyle association study that provided a working basis for reading and designing genetic association research.",
+      ],
+    },
+    {
+      institution: "Can Tho University of Medicine and Pharmacy, Vietnam",
+      degree: "Bachelor of Laboratory Science",
+      location: "Can Tho, Vietnam",
+      startYear: "2011",
+      graduationYear: "2015",
+    },
+  ],
+  experience: [
+    {
+      company: "Vinh Long Provincial CDC",
+      position: "Laboratory / Diagnostics Specialist (Molecular Diagnostics)",
+      location: "Vinh Long, Vietnam",
+      startDate: "2021",
+      endDate: "May 2026",
+      achievements: [
+        "Designed and built a barcode-based specimen traceability system and data pipeline on Google Sheets and Google Apps Script, increasing daily PCR throughput from under 300 to about 4,000 samples (roughly 13x) and earning recognition in the Top 50 HIS-COVID Innovations 2021 by Vietnam's Ministry of Science and Technology.",
+        "Reduced test turnaround time by about 40 percent through workflow redesign and plate layout optimization.",
+        "Conducted real-time PCR and RT-PCR testing for SARS-CoV-2 alongside immunoassay procedures, running a diagnostic menu of hepatitis, intestinal parasites by wet mount, and toxocariasis.",
+        "Helped set up the new biosafety level 2 molecular laboratory in 2021, installing and commissioning the real-time PCR system, automated nucleic-acid extractor, and biosafety cabinet while drafting SOPs.",
+        "Formulated in-house PCR positive controls and trained junior laboratory staff and front-line health workers in specimen collection protocols.",
+        "Carried out outbreak investigations and field specimen collection in direct collaboration with clinicians and epidemiologists.",
+      ],
+    },
+    {
+      company: "Vinh Long Department of Science and Technology",
+      position: "Specialist, Innovation and Digital Transformation Center",
+      location: "Vinh Long, Vietnam",
+      startDate: "May 2026",
+      endDate: "Present",
+      achievements: [
+        "Designs and delivers training programmes on digital transformation and applied AI for government staff, including curriculum design and hands-on implementation support.",
+        "Maintains an active working relationship with the provincial CDC and neighbouring Mekong Delta preventive-medicine units, communicating technical progress to non-specialist stakeholders.",
+      ],
+    },
+    {
+      company: "Hoan My Cuu Long Hospital",
+      position: "Hospital Data Analysis (alongside laboratory and laboratory-supply roles)",
+      location: "Can Tho, Vietnam",
+      startDate: "2015",
+      endDate: "2018",
+      achievements: [
+        "Analysed hospital operational and clinical datasets and built Power BI dashboards and reports for management, working in parallel with part-time laboratory work and sales of laboratory supplies and equipment.",
+      ],
+    },
+    {
+      company: "Turing",
+      position: "AI Quality Analyst — Gemini-related programme",
+      location: "Remote",
+      startDate: "April 2026",
+      endDate: "July 2026",
+      achievements: [
+        "Evaluated Vietnamese-language AI outputs against quality rubrics and data-security requirements, working 40 hours/week in English with a US-based team.",
+      ],
+    },
+  ],
+  skills: [
+    {
+      category: "Molecular biology & diagnostics",
+      items: [
+        "Real-time PCR / RT-PCR",
+        "Nucleic-acid extraction (manual & automated)",
+        "Immunoassay",
+        "In-house positive controls",
+        "Parasitology (wet mount)",
+        "Microbiological culture on agar plates (student training)",
+        "BSL-2 biosafety",
+        "SOP writing & quality assurance",
+      ],
+    },
+    {
+      category: "Research data & analysis",
+      items: [
+        "Research data collection (health check-up cohort)",
+        "Data compilation & cleaning",
+        "Statistical analysis",
+        "Data visualisation (Power BI)",
+        "Scientific writing & publication",
+        "Genetic association study design (reading level)",
+      ],
+    },
+    {
+      category: "Tools",
+      items: ["Python", "TypeScript", "SQL", "Power BI", "Google Sheets / Apps Script", "Microsoft Office", "Linux"],
+    },
+    {
+      category: "Working style",
+      items: ["Planning & time management", "Cross-team communication", "Staff training", "Fluent working English"],
+    },
+  ],
+  projects: [],
+  codingProfiles: [],
+  certifications: [
+    "Biosafety certificate — Pasteur Institute (2021)",
+    "ORCID: 0000-0002-2706-9572",
+  ],
+  achievements: [
+    "First-author: Hara A., Nguyen M. Phat, Tsujiguchi H., et al. \"Effect of β3-adrenergic receptor gene polymorphism and lifestyle on overweight in Japanese rural residents: a cross-sectional study.\" Obesity Science & Practice. 2021;8(2):199-207. doi:10.1002/osp4.560",
+    "Co-author: Suzuki K., Tsujiguchi H., Miyagi S., Nguyen M. Phat, et al. \"Association between serum 25-hydroxyvitamin D concentrations and chronic pain: Effects of drinking habits.\" Journal of Pain Research. 2020;13:2987-2996. doi:10.2147/JPR.S277979",
+    "Top 50 HIS-COVID Innovations 2021 — Vietnam Ministry of Science and Technology (Entry No. 9)",
+  ],
+};
+
 export const resumes: Record<string, ResumeData> = {
   default: defaultResume,
   // Per-job variants live here. Each key becomes a clean URL at
@@ -802,6 +932,7 @@ export const resumes: Record<string, ResumeData> = {
   "medical-engagement": medicalEngagementResume,
   "bioinformatics-bd": bioinformaticsBdResume,
   "pacific-informatics": pacificInformaticsResume,
+  "molecular-researcher": molecularResearcherResume,
 };
 
 export const resumeData = resumes.default;
