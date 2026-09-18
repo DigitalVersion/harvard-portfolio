@@ -852,16 +852,6 @@ const molecularResearcherResume: ResumeData = {
       ],
     },
     {
-      company: "Hoan My Cuu Long Hospital",
-      position: "Hospital Data Analysis (alongside laboratory and laboratory-supply roles)",
-      location: "Can Tho, Vietnam",
-      startDate: "2015",
-      endDate: "2018",
-      achievements: [
-        "Analysed hospital operational and clinical datasets and built Power BI dashboards and reports for management, working in parallel with part-time laboratory work and sales of laboratory supplies and equipment.",
-      ],
-    },
-    {
       company: "Turing",
       position: "AI Quality Analyst — Gemini-related programme",
       location: "Remote",
