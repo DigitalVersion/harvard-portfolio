@@ -1013,7 +1013,7 @@ const bioturingProductSpecialistResume: ResumeData = {
         "Rubric-based QA and evaluation criteria",
         "Gathering user feedback and turning it into actionable requirements",
         "Fluent working English",
-        "Vietnamese citizen, available on-site in HCMC",
+        "Vietnamese citizen, based in Can Tho (Mekong Delta), open to relocating to Ho Chi Minh City",
       ],
     },
   ],
