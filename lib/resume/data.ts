@@ -1027,6 +1027,152 @@ const bioturingProductSpecialistResume: ResumeData = {
   achievements: molecularResearcherResume.achievements,
 };
 
+// WHO — Internship, Ethics Team, Foresight/Leadership & Ethics in Science (FLS),
+// Science for Health Division, Geneva. Ordered to mirror the vacancy's own duty
+// list: public health surveillance workstream first, then anticipatory
+// governance of emerging technologies (TArGET) and responsible AI use, then
+// literature review / technical outputs, then convening and outreach.
+// Honesty constraints: never imply current enrolment (graduated 2020), never
+// claim bioethics expert / ethicist / ethics-committee membership, throughput
+// figure is ~4,000/day, barcode workflow adoption is time-scoped to the
+// pandemic peak, no ISO 42001 course (not evidenced in profile.md).
+const whoEthicsInternResume: ResumeData = {
+  ...molecularResearcherResume,
+  personal: {
+    ...molecularResearcherResume.personal,
+    title: "Public Health Scientist · Surveillance Systems & Responsible AI Governance",
+  },
+  summary:
+    "Spent five years in public health laboratory work at a provincial CDC in Vietnam, serving the province's communicable disease control and surveillance programmes. Holds an MMedSc from Kanazawa University and two peer-reviewed publications, one as first author. Now designs and teaches applied-AI and digital governance training for government officials. Brings the view from a middle-income country, which is where WHO's work on building health ethics capacity has to land.",
+  experience: [
+    {
+      company: "Vinh Long Provincial CDC",
+      position: "Laboratory / Diagnostics Specialist",
+      location: "Vinh Long, Vietnam",
+      startDate: "2021",
+      endDate: "May 2026",
+      achievements: [
+        "Conducted molecular and immunoassay diagnostics within the province's communicable disease control and surveillance programmes, and took part in outbreak investigations and field specimen collection alongside clinicians and epidemiologists.",
+        "Built a barcode specimen traceability system on Google Sheets and Google Apps Script that took daily PCR processing from under 300 to about 4,000 samples, recognised in the Top 50 HIS-COVID Innovations 2021 by Vietnam's Ministry of Science and Technology.",
+        "Cut laboratory turnaround time by about 40 percent. The workflow was adopted as the standard provincial process during the pandemic peak.",
+        "Reported diagnostic results into the provincial emergency response system when requested, the point where surveillance data meets decisions that affect people.",
+        "Helped set up a BSL-2 molecular laboratory in 2021, drafted standard operating procedures, and trained front-line health workers in specimen collection.",
+      ],
+    },
+    {
+      company: "Vinh Long Department of Science and Technology",
+      position: "Specialist, Innovation and Digital Transformation Center",
+      location: "Vinh Long, Vietnam",
+      startDate: "May 2026",
+      endDate: "Present",
+      achievements: [
+        "Designs, delivers and teaches digital transformation and applied-AI training for government officials, using official Anthropic Academy content including the AI Fluency Framework, so that public servants learn to use AI responsibly in their own work.",
+        "Teaches a module on VNeID, Vietnam's national digital identity platform, which is integrating citizen health check-up records. The module covers the practical governance questions that arise when health data is joined up at national scale.",
+        "Keeps an active working relationship with Vinh Long CDC and neighbouring Mekong Delta provincial CDCs, and explains technical material to non-specialist audiences.",
+      ],
+    },
+    {
+      company: "Turing",
+      position: "AI Quality Analyst — Gemini-related programme",
+      location: "Remote",
+      startDate: "April 2026",
+      endDate: "July 2026",
+      achievements: [
+        "Evaluated Vietnamese-language AI outputs against quality rubrics and data-security requirements, working 40 hours a week in English with a US-based team.",
+      ],
+    },
+    {
+      company: "Laboratory supply and equipment distributors",
+      position: "Sales Representative (with part-time laboratory work)",
+      location: "Mekong Delta, Vietnam",
+      startDate: "2015",
+      endDate: "2018",
+      achievements: [
+        "Sold laboratory supplies and equipment to hospitals and preventive-medicine units while working part time in diagnostic laboratories.",
+      ],
+    },
+  ],
+  skills: [
+    {
+      category: "Public health & surveillance",
+      items: [
+        "Communicable disease surveillance programmes",
+        "Outbreak investigation & field specimen collection",
+        "Molecular diagnostics (real-time PCR / RT-PCR)",
+        "Immunoassay",
+        "BSL-2 biosafety",
+        "SOP writing & quality assurance",
+        "Reporting into provincial emergency response",
+        "Training front-line health workers",
+      ],
+    },
+    {
+      category: "Research & writing",
+      items: [
+        "Academic literature review",
+        "Research data collection (health check-up cohort)",
+        "Data compilation & statistical analysis",
+        "Scientific writing & peer-reviewed publication",
+        "Drafting notes, summaries and presentations",
+      ],
+    },
+    {
+      category: "Responsible AI & digital governance",
+      items: [
+        "Rubric-based evaluation of AI outputs",
+        "Data-security requirements in AI work",
+        "AI Fluency Framework (Anthropic Academy) instruction",
+        "Digital transformation training for public servants",
+        "Digital identity & health data integration (teaching)",
+      ],
+    },
+    {
+      category: "Languages & tools",
+      items: [
+        "Vietnamese (native)",
+        "English (professional working proficiency; English-taught master's, English-language publications, daily use with a US team)",
+        "Microsoft Word, Excel, PowerPoint",
+        "Google Sheets / Apps Script",
+        "Power BI",
+        "Python, SQL, Linux",
+      ],
+    },
+  ],
+  education: [
+    {
+      institution: "Kanazawa University, Japan",
+      degree: "Master of Medical Sciences (MMedSc) — Environmental and Preventive Medicine",
+      location: "Kanazawa, Japan",
+      startYear: "2018",
+      graduationYear: "2020",
+      bullets: [
+        "Completed an English-taught degree and collected health check-up field data in a Japanese rural cohort, building the dataset behind two peer-reviewed papers.",
+        "Handled data compilation, statistical analysis and manuscript preparation, as first author on one of the two publications.",
+      ],
+    },
+    {
+      institution: "Can Tho University of Medicine and Pharmacy, Vietnam",
+      degree: "Bachelor of Laboratory Science",
+      location: "Can Tho, Vietnam",
+      startYear: "2011",
+      graduationYear: "2015",
+    },
+  ],
+  projects: [],
+  codingProfiles: [],
+  certifications: [
+    "Biosafety certificate — Pasteur Institute (2021)",
+    "Certificate of Completion — Google Cloud Gen AI Academy APAC 2026, Cohort 3",
+    "Top 50 HIS-COVID Innovations 2021 — Vietnam Ministry of Science and Technology (Entry No. 9)",
+    "ORCID: 0000-0002-2706-9572",
+  ],
+  achievements: [
+    "First-author: Hara A., Nguyen M. Phat, Tsujiguchi H., et al. \"Effect of β3-adrenergic receptor gene polymorphism and lifestyle on overweight in Japanese rural residents: a cross-sectional study.\" Obesity Science & Practice. 2021;8(2):199-207. doi:10.1002/osp4.560",
+    "Co-author: Suzuki K., Tsujiguchi H., Miyagi S., Nguyen M. Phat, et al. \"Association between serum 25-hydroxyvitamin D concentrations and chronic pain: Effects of drinking habits.\" Journal of Pain Research. 2020;13:2987-2996. doi:10.2147/JPR.S277979",
+    "Volunteering — Coach for College (Duke University / Peacework), summer 2013, Hau Giang, Vietnam: co-taught physics and tennis with US student-athletes at a summer camp for rural lower-secondary students, and served as the camp interpreter and the bridge between the two languages and cultures.",
+  ],
+};
+
 export const resumes: Record<string, ResumeData> = {
   default: defaultResume,
   // Per-job variants live here. Each key becomes a clean URL at
@@ -1042,6 +1188,7 @@ export const resumes: Record<string, ResumeData> = {
   "pacific-informatics": pacificInformaticsResume,
   "molecular-researcher": molecularResearcherResume,
   "bioturing-product-specialist": bioturingProductSpecialistResume,
+  "who-ethics-intern": whoEthicsInternResume,
 };
 
 export const resumeData = resumes.default;
