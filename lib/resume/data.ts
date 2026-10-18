@@ -1173,6 +1173,142 @@ const whoEthicsInternResume: ResumeData = {
   ],
 };
 
+// Abbott — Science Content Specialist (Retailer), HCMC, 3rd-party service
+// contract. Angle order: reads primary scientific literature -> real medical
+// training -> teaching/content production -> rubric-based content review.
+// Honesty constraints: NO nutrition/mother-and-baby content-industry claim,
+// NO Vietnamese advertising-regulation claim, NO livestream, NO video
+// production (profile.md has no evidence of video/script work), ~4,000/day.
+const abbottScienceContentResume: ResumeData = {
+  ...molecularResearcherResume,
+  personal: {
+    ...molecularResearcherResume.personal,
+    title: "Medical Scientist · Science Communication & Content Quality",
+  },
+  summary:
+    "Medical and laboratory science background built inside the public health system. Reads research papers and clinical guidelines in the original, with an MMedSc from Kanazawa University and first authorship on a study of overweight, lifestyle and genetics in Obesity Science & Practice. Teaches for a living, which means turning hard technical material into something non-specialists can follow. Reviews content against written quality rubrics, most recently for a US-based team.",
+  experience: [
+    {
+      company: "Vinh Long Department of Science and Technology",
+      position: "Specialist, Innovation and Digital Transformation Centre",
+      location: "Vinh Long, Vietnam",
+      startDate: "May 2026",
+      endDate: "Present",
+      achievements: [
+        "Designs, delivers and personally teaches a digital transformation and applied AI training programme for government staff using official Anthropic Academy content, turning difficult technical material into lessons non-specialists can follow.",
+        "Runs hocvienai.help, an online learning platform with paying students, producing the lessons and course content personally.",
+        "Explains technical progress to non-specialist stakeholders while keeping an active working relationship with the provincial CDC and neighbouring preventive-medicine units.",
+      ],
+    },
+    {
+      company: "Turing Enterprises, Inc.",
+      position: "AI Quality Analyst — Gemini-related programme",
+      location: "Remote",
+      startDate: "April 2026",
+      endDate: "July 2026",
+      achievements: [
+        "Reviewed outputs against written quality rubrics and returned structured improvement feedback, working to Google's quality standards and data-security requirements.",
+        "Worked 40 hours a week in English with a US-based team, applying the same criteria consistently across a high volume of material.",
+      ],
+    },
+    {
+      company: "Vinh Long Provincial CDC",
+      position: "Laboratory / Diagnostics Specialist",
+      location: "Vinh Long, Vietnam",
+      startDate: "2021",
+      endDate: "May 2026",
+      achievements: [
+        "Ran five years of molecular diagnostics supporting provincial disease-prevention programmes, performing real-time PCR and RT-PCR alongside immunoassay work.",
+        "Trained front-line health workers in correct specimen collection during the COVID-19 pandemic, coaching non-specialists until they could perform a technical procedure reliably.",
+        "Designed a barcode specimen-traceability system and data pipeline on Google Sheets and Apps Script, taking daily PCR throughput from under 300 to about 4,000 samples, roughly thirteen times.",
+        "Cut test turnaround time by about 40 percent through workflow redesign and plate layout optimisation; the system was adopted as the standard provincial procedure during the peak of the pandemic.",
+        "Recognised in the Top 50 HIS-COVID Innovations 2021 by Vietnam's Ministry of Science and Technology, and helped set up a new biosafety level 2 molecular laboratory including drafting SOPs.",
+      ],
+    },
+    {
+      company: "Laboratory supply distributors",
+      position: "Sales Representative (part-time laboratory work)",
+      location: "Can Tho, Vietnam",
+      startDate: "2015",
+      endDate: "2018",
+      achievements: [
+        "Sold laboratory supplies and equipment for distribution companies while doing part-time laboratory work and hospital data analysis in Power BI.",
+      ],
+    },
+  ],
+  skills: [
+    {
+      category: "Science communication",
+      items: [
+        "Reading primary research papers and clinical guidelines",
+        "Translating technical material for non-specialists",
+        "Curriculum and lesson design",
+        "Classroom teaching and training delivery",
+        "Scientific writing and publication",
+        "Working English (written and spoken)",
+      ],
+    },
+    {
+      category: "Medical & nutrition science background",
+      items: [
+        "Environmental and preventive medicine (MMedSc)",
+        "Obesity, lifestyle and gene-association research",
+        "Micronutrient research (serum 25-hydroxyvitamin D)",
+        "Medical laboratory science (BSc)",
+        "Molecular diagnostics (real-time PCR / RT-PCR)",
+        "Immunoassay",
+      ],
+    },
+    {
+      category: "Content quality & review",
+      items: [
+        "Rubric-based output review",
+        "Structured improvement feedback",
+        "Criteria and SOP writing",
+        "Quality assurance workflows",
+        "Training non-specialists to a standard",
+      ],
+    },
+    {
+      category: "Data",
+      items: [
+        "Performance data review",
+        "Data compilation and cleaning",
+        "Statistical analysis",
+        "Power BI",
+        "Google Sheets / Apps Script",
+      ],
+    },
+  ],
+  education: [
+    {
+      institution: "Kanazawa University, Japan",
+      degree: "MMedSc (Master of Medical Sciences) — Environmental and Preventive Medicine",
+      location: "Kanazawa, Japan",
+      startYear: "2018",
+      graduationYear: "2020",
+      bullets: [
+        "Completed a Master of Medical Sciences in Environmental and Preventive Medicine taught entirely in English, collecting health check-up data in a Japanese rural cohort that became the dataset behind two peer-reviewed papers.",
+        "Contributed to data compilation, statistical analysis and manuscript preparation as first author on the overweight and lifestyle study, so reading research papers and clinical guidelines in the original is routine work rather than a skill still to be acquired.",
+      ],
+    },
+    {
+      institution: "Can Tho University of Medicine and Pharmacy, Vietnam",
+      degree: "BSc Medical Laboratory Science",
+      location: "Can Tho, Vietnam",
+      startYear: "2011",
+      graduationYear: "2015",
+    },
+  ],
+  projects: [],
+  codingProfiles: [],
+  certifications: [
+    "Google Cloud Gen AI Academy APAC 2026, Cohort 3 — Certificate of Completion",
+    "Biosafety certificate — Pasteur Institute (2021)",
+    "ORCID: 0000-0002-2706-9572",
+  ],
+};
+
 export const resumes: Record<string, ResumeData> = {
   default: defaultResume,
   // Per-job variants live here. Each key becomes a clean URL at
@@ -1189,6 +1325,7 @@ export const resumes: Record<string, ResumeData> = {
   "molecular-researcher": molecularResearcherResume,
   "bioturing-product-specialist": bioturingProductSpecialistResume,
   "who-ethics-intern": whoEthicsInternResume,
+  "abbott-science-content": abbottScienceContentResume,
 };
 
 export const resumeData = resumes.default;
