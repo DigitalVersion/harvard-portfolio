@@ -11,7 +11,7 @@ const defaultResume: ResumeData = {
     website: "https://hocvienai.help",
   },
   summary:
-    "Applied AI systems designer and medical laboratory scientist with an MMedSc from Kanazawa University, Japan. Built a barcode-based PCR traceability workflow that scaled CDC Vinh Long from under 300 to about 8,000 samples a day and cut turnaround time by roughly 40%. Now focused on practical AI agents, AI-LMS infrastructure, and public-sector and SMB AI adoption.",
+    "Applied AI systems designer and medical laboratory scientist with an MMedSc from Kanazawa University, Japan. Built a barcode-based PCR traceability workflow that scaled CDC Vinh Long from under 300 to about 4,000 samples a day and cut turnaround time by roughly 40%. Now leads the OpenELIS Vietnam laboratory information system pilot, serves as Vietnamese Language Coordinator for OpenELIS Global, and works on practical AI agents and public-sector and SMB AI adoption.",
   education: [
     {
       institution: "Kanazawa University, Japan",
@@ -38,6 +38,19 @@ const defaultResume: ResumeData = {
       achievements: [
         "Support local startups and SMBs applying AI and digital technologies.",
         "Design practical AI training and implementation pathways for public-sector and business users.",
+      ],
+    },
+    {
+      company: "OpenELIS Vietnam",
+      position: "Implementation Lead",
+      location: "Dong Thap, Vietnam",
+      startDate: "October 2026",
+      endDate: "Present",
+      achievements: [
+        "Lead OpenELIS Vietnam, an MPL-2.0 fork of OpenELIS Global 2 (University of Washington DIGI) adapted for private laboratories in Vietnam. DIGI approved the name \"OpenELIS Vietnam\" in October 2026.",
+        "Pilot site: Medilab (Dong Thap). The system has run in parallel with the lab's existing LIS since October 2026; the legacy LIS remains in use.",
+        "Added a full Vietnamese interface, patient registration by scanning the QR code on the national ID card, bulk import of health-check groups from Excel, eGFR (CKD-EPI 2021), cross-test plausibility rules, and an AI-assisted overall review of results.",
+        "Built an FHIR R4 connector for Vietnam's electronic health book (pending an integration account) and set up K37 Edge, an edge device that reads results from HORIBA H500, Roche cobas e411, Beckman AU680, and SQA-iO analyzers, currently in trial mode.",
       ],
     },
     {
@@ -70,10 +83,10 @@ const defaultResume: ResumeData = {
       startDate: "2021",
       endDate: "2026",
       achievements: [
-        "Designed a barcode-based specimen traceability system for PCR testing, scaling throughput from under 300 to about 8,000 samples a day (~26x).",
+        "Designed a barcode-based specimen traceability system for PCR testing, scaling throughput from under 300 to about 4,000 samples a day (~13x).",
         "Reduced diagnostic turnaround time by roughly 40% through workflow redesign, plate layout optimization, and quality-assurance monitoring.",
         "Recognized in the Top 50 HIS-COVID Innovations 2021, a program supported by Vietnam's Ministry of Science and Technology.",
-        "Performed diagnostics across hematology, microbiology, biochemistry, and molecular platforms; supported outbreak response; trained junior personnel.",
+        "Ran immunoassay and PCR testing (hepatitis, toxocariasis, SARS-CoV-2) and intestinal-parasite microscopy; supported outbreak response; trained junior personnel.",
       ],
     },
   ],
@@ -84,6 +97,17 @@ const defaultResume: ResumeData = {
     { category: "Lab systems", items: ["PCR workflow design", "Barcode traceability", "Quality assurance"] },
   ],
   projects: [
+    {
+      title: "OpenELIS Global 2 (open-source contributor)",
+      role: "Contributor; Vietnamese Language Coordinator (Transifex)",
+      period: "October 2026 – Present",
+      githubUrl: "https://github.com/DIGI-UW/OpenELIS-Global-2/pull/4724",
+      achievements: [
+        "Open-source contributor to OpenELIS Global 2 (University of Washington DIGI). PR #4724, a CI workflow that publishes multi-arch (amd64 + arm64) container images for the database, FHIR, and proxy services, was merged in October 2026.",
+        "PR #4729, accent-insensitive patient name search, is open for review.",
+        "Vietnamese Language Coordinator for OpenELIS Global on Transifex, invited by Casey Iiams-Hauser, Director of Product, OpenELIS Global (DIGI, University of Washington), in October 2026.",
+      ],
+    },
     {
       title: "Haven (open-source contributor)",
       role: "Regular contributor, #3 on GitHub's contribution graph",
@@ -111,6 +135,7 @@ const defaultResume: ResumeData = {
   ],
   certifications: [],
   achievements: [
+    "Vietnamese Language Coordinator, OpenELIS Global (Transifex), 2026 — invited by the Director of Product, OpenELIS Global (DIGI, University of Washington)",
     "Top 50 HIS-COVID Innovations 2021 — Vietnam Ministry of Science and Technology (Entry No. 9)",
     "First-author: Hara A., Nguyen M. Phat, et al. \"Effect of β3-adrenergic receptor gene polymorphism and lifestyle on overweight in Japanese rural residents.\" Obesity Science & Practice. 2021;8(2):199-207. doi:10.1002/osp4.560",
     "Co-author: Suzuki K., Tsujiguchi H., Miyagi S., Nguyen M. Phat, et al. \"Association between serum 25-hydroxyvitamin D concentrations and chronic pain: Effects of drinking habits.\" Journal of Pain Research. 2020;13:2987-2996. doi:10.2147/JPR.S277979",

@@ -390,7 +390,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
             {edu.bullets && edu.bullets.length > 0 && (
               <View style={styles.bulletList}>
                 {edu.bullets.map((bullet, idx) => (
-                  <View key={idx} style={styles.bulletItem}>
+                  <View key={idx} style={styles.bulletItem} wrap={false}>
                     <Text style={styles.bullet}>•</Text>
                     <Text style={styles.bulletText}>{bullet}</Text>
                   </View>
@@ -418,7 +418,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
             {exp.achievements && (
               <View style={styles.bulletList}>
                 {exp.achievements.map((achievement, idx) => (
-                  <View key={idx} style={styles.bulletItem}>
+                  <View key={idx} style={styles.bulletItem} wrap={false}>
                     <Text style={styles.bullet}>•</Text>
                     <Text style={styles.bulletText}>{achievement}</Text>
                   </View>
@@ -453,7 +453,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
                     <View style={styles.bulletList}>
                       {project.achievements &&
                         project.achievements.map((achievement, idx) => (
-                          <View key={idx} style={styles.bulletItem}>
+                          <View key={idx} style={styles.bulletItem} wrap={false}>
                             <Text style={styles.bullet}>•</Text>
                             <Text style={styles.bulletText}>{achievement}</Text>
                           </View>
@@ -502,7 +502,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
               <View style={styles.bulletList}>
                 {project.achievements &&
                   project.achievements.map((achievement, idx) => (
-                    <View key={idx} style={styles.bulletItem}>
+                    <View key={idx} style={styles.bulletItem} wrap={false}>
                       <Text style={styles.bullet}>•</Text>
                       <Text style={styles.bulletText}>{achievement}</Text>
                     </View>
