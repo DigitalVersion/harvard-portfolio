@@ -642,8 +642,8 @@ const bioinformaticsBdResume: ResumeData = {
       startDate: "May 2021",
       endDate: "Apr 2026",
       achievements: [
-        "Served as a daily buyer-side user of extraction kits and PCR reagents for molecular diagnostics (qPCR/RT-PCR for SARS-CoV-2, hepatitis, intestinal parasites, toxoplasmosis, toxocariasis) and hematology, microbiology, and biochemistry platforms; biosafety certificate, Pasteur Institute (2021).",
-        "Designed and built a barcode-based specimen traceability and reporting pipeline (collection → PCR result → provincial case report) replacing handwritten transcription, scaling daily PCR throughput from under 300 to ~4,000 samples (~13x) and cutting turnaround ~40% through workflow and 96-well plate-layout redesign; migrated label printing from BarTender to open-source OpenLabel, still in production; recognized in the Top 50 HIS-COVID Innovations 2021 (Vietnam Ministry of Science and Technology).",
+        "Served as a daily buyer-side user of extraction kits and PCR reagents for molecular diagnostics (qPCR/RT-PCR for SARS-CoV-2) and immunoassay kits (hepatitis, toxocariasis), with intestinal-parasite microscopy and work on hematology and biochemistry platforms; biosafety certificate, Pasteur Institute (2021).",
+        "Designed and built a barcode-based specimen traceability and reporting pipeline (from collection to PCR result to provincial case report) replacing handwritten transcription, scaling daily PCR throughput from under 300 to ~4,000 samples (~13x) and cutting turnaround ~40% through workflow and 96-well plate-layout redesign; migrated label printing from BarTender to open-source OpenLabel, still in production; recognized in the Top 50 HIS-COVID Innovations 2021 (Vietnam Ministry of Science and Technology).",
         "Worked daily with clinicians, epidemiologists, and public health officers on outbreak investigations and field specimen collection across the province, while training junior laboratory staff on diagnostic protocols and quality standards.",
         "Maintains active working relationships with CDC Vinh Long and neighboring Mekong Delta CDCs, with first-hand knowledge of how public health laboratories evaluate, procure, and adopt new diagnostic tools.",
       ],
@@ -768,7 +768,7 @@ const pacificInformaticsResume: ResumeData = {
       startDate: "May 2021",
       endDate: "Apr 2026",
       achievements: [
-        "Used DNA/RNA extraction kits and PCR reagents daily for qPCR/RT-PCR (SARS-CoV-2, hepatitis, intestinal parasites, toxoplasmosis, toxocariasis), alongside hematology, microbiology, and biochemistry platforms; biosafety certificate, Pasteur Institute (2021).",
+        "Used DNA/RNA extraction kits and PCR reagents daily for qPCR/RT-PCR (SARS-CoV-2), alongside immunoassays (hepatitis, toxocariasis), intestinal-parasite microscopy, and hematology and biochemistry platforms; biosafety certificate, Pasteur Institute (2021).",
         "Designed and built a barcode specimen traceability data pipeline from collection to PCR result to provincial report, scaling daily throughput from under 300 to ~4,000 samples (~13x) and cutting turnaround time ~40% through workflow and 96-well plate-layout redesign; migrated label printing from BarTender to open-source OpenLabel, still in production. Top 50 HIS-COVID Innovations 2021 (Vietnam Ministry of Science and Technology).",
         "Trained junior staff on protocols and quality standards, and worked daily with clinicians, epidemiologists, and public health officers on outbreak investigations and field specimen collection.",
         "Maintains active working relationships with CDC Vinh Long, other Mekong Delta CDCs, and hospitals, with first-hand knowledge of how public labs evaluate, procure, and adopt new tools.",
