@@ -154,7 +154,7 @@ const cdcLabResume: ResumeData = {
     title: "Public Health Laboratory Specialist",
   },
   summary:
-    "Public health laboratory specialist with five years inside Vietnam's Ministry of Health system at the provincial CDC level, and a Master of Medical Sciences in preventive medicine from Kanazawa University with two peer-reviewed publications. Designed the barcode-based PCR traceability system that scaled CDC Vinh Long from under 300 to about 8,000 samples a day during COVID-19. Now designs and delivers digital-transformation and training programs for public-sector agencies at the Vinh Long Department of Science and Technology.",
+    "Public health laboratory specialist with five years inside Vietnam's Ministry of Health system at the provincial CDC level, and a Master of Medical Sciences in preventive medicine from Kanazawa University with two peer-reviewed publications. Designed the barcode-based PCR traceability system that scaled CDC Vinh Long from under 300 to about 4,000 samples a day during COVID-19. Now designs and delivers digital-transformation and training programs for public-sector agencies at the Vinh Long Department of Science and Technology.",
   experience: [
     {
       company: "Vinh Long Provincial CDC",
@@ -164,11 +164,11 @@ const cdcLabResume: ResumeData = {
       endDate: "2026",
       achievements: [
         "Ran laboratory operations, reporting, and quality assurance within Vietnam's Ministry of Health provincial CDC system.",
-        "Designed a barcode-based specimen traceability system for PCR testing, scaling throughput from under 300 to about 8,000 samples a day (~26x) during COVID-19; recognized in the Top 50 HIS-COVID Innovations 2021, a program supported by Vietnam's Ministry of Science and Technology.",
+        "Designed a barcode-based specimen traceability system for PCR testing, scaling throughput from under 300 to about 4,000 samples a day (~13x) during COVID-19; recognized in the Top 50 HIS-COVID Innovations 2021, a program supported by Vietnam's Ministry of Science and Technology.",
         "Cut diagnostic turnaround time by roughly 40% through workflow redesign, plate layout optimization, and quality-assurance monitoring during outbreak response.",
-        "Performed diagnostic testing for provincial disease-control programs covering malaria, dengue, hepatitis, intestinal parasites, toxoplasmosis, toxocariasis, and measles, across molecular, microbiology, hematology, and biochemistry platforms.",
-        "Took part in routine field epidemiology work: community outbreak investigations, immunization campaigns, and field specimen collection for provincial surveillance.",
-        "Trained junior laboratory personnel and used data analysis to manage specimen routing and daily operations.",
+        "Ran immunoassay and PCR testing for provincial disease-control programs (hepatitis, toxocariasis, SARS-CoV-2) and intestinal-parasite microscopy, with additional work on hematology and biochemistry platforms.",
+        "Took part in routine field epidemiology work: community outbreak investigations and field specimen collection for provincial surveillance.",
+        "Trained junior laboratory personnel and, during COVID-19, frontline health workers on specimen collection.",
       ],
     },
     {
@@ -280,7 +280,7 @@ const educatoResume: ResumeData = {
       startDate: "2021",
       endDate: "2026",
       achievements: [
-        "Designed and ran a barcode-based specimen traceability system for PCR testing, scaling throughput from under 300 to about 8,000 samples a day (~26x) and cutting turnaround time by roughly 40%; recognized in the Top 50 HIS-COVID Innovations 2021.",
+        "Designed and ran a barcode-based specimen traceability system for PCR testing, scaling throughput from under 300 to about 4,000 samples a day (~13x) and cutting turnaround time by roughly 40%; recognized in the Top 50 HIS-COVID Innovations 2021.",
       ],
     },
   ],
@@ -339,7 +339,7 @@ const tiktokHealthcareResume: ResumeData = {
       achievements: [
         "Drove adoption of a new workflow across a provincial health system under pandemic pressure: designed and implemented a barcode-based specimen traceability system that scaled PCR throughput from under 300 to about 4,000 samples a day (~13x) and cut turnaround time by roughly 40%; recognized in the Top 50 HIS-COVID Innovations 2021 (Vietnam Ministry of Science and Technology).",
         "Maintains active working relationships with CDC Vinh Long and neighboring Mekong Delta CDCs — first-hand understanding of how public healthcare institutions evaluate, procure, and adopt new tools.",
-        "Performed diagnostics across hematology, microbiology, biochemistry, and molecular platforms; supported outbreak response; trained junior personnel.",
+        "Ran immunoassay and PCR testing (hepatitis, toxocariasis, SARS-CoV-2) and intestinal-parasite microscopy, plus hematology and biochemistry work; supported outbreak response; trained junior personnel.",
       ],
     },
     {
@@ -442,8 +442,8 @@ const merckMedicalAdvisorResume: ResumeData = {
       endDate: "May 2026",
       achievements: [
         "Designed and implemented a barcode-based specimen traceability system for high-volume PCR testing, scaling throughput from under 300 to about 4,000 samples a day (~13x) and reducing turnaround time by roughly 40%; adopted across the provincial health system during the COVID-19 peak and recognized in the Top 50 HIS-COVID Innovations 2021 (Vietnam Ministry of Science and Technology).",
-        "Performed diagnostics across molecular, microbiology, hematology, and biochemistry platforms for provincial disease-control programs (malaria, dengue, hepatitis, intestinal parasites, toxoplasmosis, toxocariasis, measles); supported outbreak response and field specimen collection for provincial surveillance.",
-        "Trained junior laboratory personnel on quality assurance; took part in community outbreak investigations and immunization campaigns; maintains active working relationships with CDC Vinh Long and neighboring Mekong Delta CDCs.",
+        "Ran immunoassay and PCR testing for provincial disease-control programs (hepatitis, toxocariasis, SARS-CoV-2) and intestinal-parasite microscopy, with additional work on hematology and biochemistry platforms; supported outbreak response and field specimen collection for provincial surveillance.",
+        "Trained junior laboratory personnel on quality assurance; took part in community outbreak investigations; maintains active working relationships with CDC Vinh Long and neighboring Mekong Delta CDCs.",
       ],
     },
     {
@@ -525,9 +525,9 @@ const medicalEngagementResume: ResumeData = {
       startDate: "2021",
       endDate: "May 2026",
       achievements: [
-        "Maintains active working relationships with CDC Vinh Long and neighboring Mekong Delta CDCs — a live channel into the region's preventive-health system; took part in community outbreak investigations, immunization campaigns, and field specimen collection.",
+        "Maintains active working relationships with CDC Vinh Long and neighboring Mekong Delta CDCs — a live channel into the region's preventive-health system; took part in community outbreak investigations and field specimen collection.",
         "Drove adoption of a new barcode-based specimen traceability workflow across the provincial health system under pandemic pressure: PCR throughput scaled from under 300 to about 4,000 samples a day (~13x), turnaround time cut by roughly 40%; recognized in the Top 50 HIS-COVID Innovations 2021 (Vietnam Ministry of Science and Technology).",
-        "Performed diagnostics across molecular, microbiology, hematology, and biochemistry platforms for provincial disease-control programs; designed and delivered quality-assurance training for junior laboratory personnel.",
+        "Ran immunoassay and PCR testing and intestinal-parasite microscopy for provincial disease-control programs, with additional work on hematology and biochemistry platforms; designed and delivered quality-assurance training for junior laboratory personnel.",
       ],
     },
     {

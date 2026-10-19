@@ -406,6 +406,8 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
         <Text style={styles.sectionTitle}>Experience</Text>
         {data.experience.map((exp, index) => (
           <View key={index} style={styles.experienceItem}>
+            {/* Header + first bullet never split across pages (no orphaned headers) */}
+            <View wrap={false}>
             <View style={styles.experienceHeader}>
               <Text style={{ fontSize: 11, fontWeight: "bold", color: "#000000" }}>{exp.company}</Text>
               <Text style={styles.dateRange}>
@@ -415,9 +417,18 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
             <View style={styles.companyRow}>
               <Text style={{ fontSize: 10, fontStyle: "italic", color: "#000000" }}>{exp.position}</Text>
             </View>
-            {exp.achievements && (
+            {exp.achievements && exp.achievements.length > 0 && (
               <View style={styles.bulletList}>
-                {exp.achievements.map((achievement, idx) => (
+                <View style={styles.bulletItem}>
+                  <Text style={styles.bullet}>•</Text>
+                  <Text style={styles.bulletText}>{exp.achievements[0]}</Text>
+                </View>
+              </View>
+            )}
+            </View>
+            {exp.achievements && exp.achievements.length > 1 && (
+              <View style={{ marginLeft: 8 }}>
+                {exp.achievements.slice(1).map((achievement, idx) => (
                   <View key={idx} style={styles.bulletItem} wrap={false}>
                     <Text style={styles.bullet}>•</Text>
                     <Text style={styles.bulletText}>{achievement}</Text>
@@ -478,6 +489,8 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
 
           return (
             <View key={index} style={styles.projectItem}>
+              {/* Header + first bullet never split across pages */}
+              <View wrap={false}>
               <View style={styles.projectHeader}>
                 {formattedUrl ? (
                   <Link src={formattedUrl} style={{ textDecoration: "none" }}>
@@ -499,9 +512,18 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
                   <Text style={{ fontSize: 10, fontStyle: "italic", color: "#000000" }}>{project.role}</Text>
                 </View>
               )}
-              <View style={styles.bulletList}>
+              {project.achievements && project.achievements.length > 0 && (
+                <View style={styles.bulletList}>
+                  <View style={styles.bulletItem}>
+                    <Text style={styles.bullet}>•</Text>
+                    <Text style={styles.bulletText}>{project.achievements[0]}</Text>
+                  </View>
+                </View>
+              )}
+              </View>
+              <View style={{ marginLeft: 8 }}>
                 {project.achievements &&
-                  project.achievements.map((achievement, idx) => (
+                  project.achievements.slice(1).map((achievement, idx) => (
                     <View key={idx} style={styles.bulletItem} wrap={false}>
                       <Text style={styles.bullet}>•</Text>
                       <Text style={styles.bulletText}>{achievement}</Text>
@@ -515,7 +537,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
       )}
 
       {/* Skills Section */}
-      <View style={styles.section}>
+      <View style={styles.section} wrap={false}>
         <Text style={styles.sectionTitle}>Skills</Text>
         <View style={styles.skillsContainer}>
           {data.skills.map((skillCategory, index) => (
@@ -531,7 +553,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
 
       {/* Coding Profiles Section */}
       {data.codingProfiles && data.codingProfiles.length > 0 && (
-        <View style={styles.section}>
+        <View style={styles.section} wrap={false}>
           <Text style={styles.sectionTitle}>Coding Profiles</Text>
           <View style={styles.profilesContainer}>
             {data.codingProfiles.map((profile, index) => (
@@ -552,8 +574,14 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
       {/* Achievements Section */}
       {data.achievements && data.achievements.length > 0 && (
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Achievements</Text>
-          {data.achievements.map((achievement, index) => (
+          <View wrap={false}>
+            <Text style={styles.sectionTitle}>Achievements</Text>
+            <View style={styles.achievementItem}>
+              <Text style={styles.achievementBullet}>•</Text>
+              <Text style={styles.achievementText}>{data.achievements[0]}</Text>
+            </View>
+          </View>
+          {data.achievements.slice(1).map((achievement, index) => (
             <View key={index} style={styles.achievementItem}>
               <Text style={styles.achievementBullet}>•</Text>
               <Text style={styles.achievementText}>{achievement}</Text>
@@ -564,7 +592,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
 
       {/* Certifications Section */}
       {data.certifications && data.certifications.length > 0 && (
-        <View style={styles.section}>
+        <View style={styles.section} wrap={false}>
           <Text style={styles.sectionTitle}>Certifications</Text>
           {data.certifications.map((cert, index) => (
             <Text key={index} style={styles.certificationText}>
