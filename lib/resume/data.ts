@@ -1374,12 +1374,26 @@ const longchauLabOpsResume: ResumeData = {
       achievements: [
         "Designed a barcode specimen-traceability system built on Google Sheets and Apps Script as a lightweight custom LIMS, replacing manual hand-copying of patient details from paper request forms onto specimen tubes — the step that drove errors and queues. Each specimen is coded once at reception, labelled, and scanned at every step after that.",
         "Increased daily throughput from under 300 to about 4,000 specimens a day, roughly thirteen times, and reduced turnaround time by about 40 percent through workflow redesign and 96-well plate layout optimisation.",
-        "Ran the specimen journey end to end — reception, collection, transport, PCR run, result return — tracking turnaround time, specimen condition and incidents, and resolving the problems that surfaced.",
+        "Handled the COVID-19 testing workflow from specimen collection through to the final result, using barcode scans for step-by-step traceability, and reported results to the provincial response system as requested.",
         "Joined from day one to establish a new biosafety level 2 (BSL-2) molecular biology laboratory in 2021, installing a real-time PCR system, automated nucleic-acid extractor and biosafety cabinet, and bringing them into routine operation.",
         "Wrote standard operating procedures and trained personnel on machine operation to establish consistent laboratory workflows and process compliance.",
         "Trained front-line health workers in specimen collection during the COVID-19 pandemic and trained junior staff inside the laboratory.",
         "Formulated in-house PCR positive controls as a quality-control tool and performed diagnostic testing across hepatitis, intestinal parasites by wet mount, toxocariasis, SARS-CoV-2 PCR and immunoassay.",
         "The system was adopted as the shared provincial process during the pandemic peak and was recognised in the Top 50 HIS-COVID Innovations 2021 by Vietnam's Ministry of Science and Technology.",
+      ],
+    },
+    {
+      company: "OpenELIS Global (open source) · OpenELIS Vietnam",
+      position: "Vietnamese Language Coordinator · Open-Source Contributor · Implementer",
+      location: "Remote",
+      startDate: "2026",
+      endDate: "Present",
+      achievements: [
+        "Serves as Vietnamese Language Coordinator for OpenELIS Global, invited by the Director of Product at DIGI, University of Washington in October 2026, bringing the Vietnamese interface to 100 percent completion on Transifex at 13,107 of 13,107 strings.",
+        "Contributed to DIGI-UW/OpenELIS-Global-2 by authoring pull request 4724 for multi-architecture container images (amd64 and arm64), merged in October 2026, with six further pull requests currently open and under review covering accent-insensitive patient search, eGFR CKD-EPI 2021, an add-on mechanism, accession-number handling and dashboard theming.",
+        "Deploys and runs an MPL-2.0 fork for one private laboratory, operating in a parallel trial alongside that laboratory's existing LIS since October 2026 without replacing it, with weekly upstream syncing.",
+        "Delivered a full Vietnamese interface, patient registration by scanning the QR code on national ID cards, bulk loading of health check-up group lists from Excel, eGFR CKD-EPI 2021 calculation, a cross-plausibility rule set, FHIR R4 connectivity pending account access, and edge-device result reading directly off analysers (HORIBA H500, Roche cobas e411, Beckman AU680, SQA-iO) in trial mode.",
+        "Works the complete specimen journey inside OpenELIS across test ordering, collection, analyser processing, result validation and report delivery, tracking turnaround time through the system's own reporting.",
       ],
     },
     {
@@ -1431,6 +1445,7 @@ const longchauLabOpsResume: ResumeData = {
       items: [
         "SOP writing & standardisation",
         "Barcode traceability systems",
+        "LIMS: OpenELIS Global (Vietnamese language coordinator; open-source contributor); lightweight specimen-tracking system built on Google Sheets + Apps Script",
         "In-house quality controls",
         "Staff training & refresher training",
         "Incident investigation & root-cause follow-up",
@@ -1439,9 +1454,7 @@ const longchauLabOpsResume: ResumeData = {
     {
       category: "Data & reporting",
       items: [
-        "Operational data analysis",
-        "Dashboard & KPI tracking",
-        "Power BI",
+        "Operational data analysis (Power BI, SQL, Python)",
         "Rubric-based quality evaluation",
         "Statistical analysis & scientific writing",
       ],
