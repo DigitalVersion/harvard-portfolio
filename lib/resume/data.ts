@@ -1389,7 +1389,7 @@ const longchauLabOpsResume: ResumeData = {
       startDate: "2026",
       endDate: "Present",
       achievements: [
-        "Serves as Vietnamese Language Coordinator for OpenELIS Global, invited by the Director of Product at DIGI, University of Washington in October 2026, bringing the Vietnamese interface to 100 percent completion on Transifex at 13,107 of 13,107 strings.",
+        "Serves as Vietnamese Language Coordinator for OpenELIS Global, invited by the product lead at DIGI, University of Washington in October 2026, bringing the Vietnamese interface to 100 percent completion on Transifex at 13,107 of 13,107 strings.",
         "Contributed to DIGI-UW/OpenELIS-Global-2 by authoring pull request 4724 for multi-architecture container images (amd64 and arm64), merged in October 2026, with six further pull requests currently open and under review covering accent-insensitive patient search, eGFR CKD-EPI 2021, an add-on mechanism, accession-number handling and dashboard theming.",
         "Deploys and runs an MPL-2.0 fork for one private laboratory, operating in a parallel trial alongside that laboratory's existing LIS since October 2026 without replacing it, with weekly upstream syncing.",
         "Delivered a full Vietnamese interface, patient registration by scanning the QR code on national ID cards, bulk loading of health check-up group lists from Excel, eGFR CKD-EPI 2021 calculation, a cross-plausibility rule set, FHIR R4 connectivity pending account access, and edge-device result reading directly off analysers (HORIBA H500, Roche cobas e411, Beckman AU680, SQA-iO) in trial mode.",
