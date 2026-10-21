@@ -1334,6 +1334,143 @@ const abbottScienceContentResume: ResumeData = {
   ],
 };
 
+// FPT Long Chau — Deputy Director of Testing Operations (HCMC). Ordered to the
+// JD's own seven duty groups: collection-point network operations, new-point
+// Go-live, training, lab coordination / specimen journey, optimisation,
+// customer incidents, reporting. Honesty constraints: no management titles
+// (he is a specialist), throughput is ~4,000/day, provincial adoption is
+// time-scoped to the pandemic peak only, no dated Power BI employer entry.
+const longchauLabOpsResume: ResumeData = {
+  ...molecularResearcherResume,
+  personal: {
+    ...molecularResearcherResume.personal,
+    title: "Laboratory Operations · Specimen Journey Systems & Throughput Optimisation",
+  },
+  education: [
+    {
+      institution: "Kanazawa University, Japan",
+      degree: "Master of Medical Sciences (MMedSc) — Environmental and Preventive Medicine",
+      location: "Kanazawa, Japan",
+      startYear: "2018",
+      graduationYear: "2020",
+    },
+    {
+      institution: "Can Tho University of Medicine and Pharmacy, Vietnam",
+      degree: "BSc Medical Laboratory Science",
+      location: "Can Tho, Vietnam",
+      startYear: "2011",
+      graduationYear: "2015",
+    },
+  ],
+  summary:
+    "Designed and ran a specimen journey system at provincial scale. Standardised the SOPs and workflow behind it, taking daily throughput from under 300 to about 4,000 specimens and cutting turnaround time by about 40 percent. Trained front-line health workers and laboratory staff on specimen collection and machine operation. Analyses operational data to improve productivity and keep the process consistent across sites.",
+  experience: [
+    {
+      company: "Vinh Long Provincial CDC",
+      position: "Laboratory / Diagnostics Specialist",
+      location: "Vinh Long, Vietnam",
+      startDate: "2021",
+      endDate: "May 2026",
+      achievements: [
+        "Designed a barcode specimen-traceability system built on Google Sheets and Apps Script as a lightweight custom LIMS, replacing manual hand-copying of patient details from paper request forms onto specimen tubes — the step that drove errors and queues. Each specimen is coded once at reception, labelled, and scanned at every step after that.",
+        "Increased daily throughput from under 300 to about 4,000 specimens a day, roughly thirteen times, and reduced turnaround time by about 40 percent through workflow redesign and 96-well plate layout optimisation.",
+        "Ran the specimen journey end to end — reception, collection, transport, PCR run, result return — tracking turnaround time, specimen condition and incidents, and resolving the problems that surfaced.",
+        "Joined from day one to establish a new biosafety level 2 (BSL-2) molecular biology laboratory in 2021, installing a real-time PCR system, automated nucleic-acid extractor and biosafety cabinet, and bringing them into routine operation. Equipment acceptance was signed off by the head of department.",
+        "Wrote standard operating procedures and trained personnel on machine operation to establish consistent laboratory workflows and process compliance.",
+        "Trained front-line health workers in specimen collection during the COVID-19 pandemic and trained junior staff inside the laboratory.",
+        "Formulated in-house PCR positive controls as a quality-control tool and performed diagnostic testing across hepatitis, intestinal parasites by wet mount, toxocariasis, SARS-CoV-2 PCR and immunoassay.",
+        "The system was adopted as the shared provincial process during the pandemic peak and was recognised in the Top 50 HIS-COVID Innovations 2021 by Vietnam's Ministry of Science and Technology.",
+      ],
+    },
+    {
+      company: "Vinh Long Department of Science and Technology",
+      position: "Specialist, Innovation and Digital Transformation Centre",
+      location: "Vinh Long, Vietnam",
+      startDate: "May 2026",
+      endDate: "Present",
+      achievements: [
+        "Designs and personally teaches training programmes on digital transformation and applied AI for government staff.",
+        "Runs hocvienai.help, an online learning platform serving paying students.",
+      ],
+    },
+    {
+      company: "Turing",
+      position: "AI Quality Analyst — Gemini-related programme",
+      location: "Remote",
+      startDate: "April 2026",
+      endDate: "July 2026",
+      achievements: [
+        "Evaluated Vietnamese-language AI outputs against written rubrics for quality and data security, working 40 hours a week in English with a US-based team to measure performance against defined criteria.",
+      ],
+    },
+    {
+      company: "Diagnostics distributors, Mekong Delta",
+      position: "Laboratory Consumables & Equipment Sales",
+      location: "Mekong Delta, Vietnam",
+      startDate: "2015",
+      endDate: "2018",
+      achievements: [
+        "Distributed laboratory consumables and equipment to hospitals and labs across the Mekong Delta alongside part-time laboratory work, gaining working knowledge of the diagnostics supply chain and laboratory procurement.",
+      ],
+    },
+  ],
+  skills: [
+    {
+      category: "Laboratory operations",
+      items: [
+        "Specimen journey design (reception → collection → transport → lab run → result return)",
+        "Turnaround time tracking & reduction",
+        "Throughput & productivity optimisation",
+        "Error-rate reduction",
+        "New laboratory set-up & equipment commissioning",
+        "BSL-2 biosafety",
+      ],
+    },
+    {
+      category: "Process design & quality",
+      items: [
+        "SOP writing & standardisation",
+        "Barcode traceability systems",
+        "In-house quality controls",
+        "Staff training & refresher training",
+        "Incident investigation & root-cause follow-up",
+      ],
+    },
+    {
+      category: "Data & reporting",
+      items: [
+        "Operational data analysis",
+        "Dashboard & KPI tracking",
+        "Power BI",
+        "Rubric-based quality evaluation",
+        "Statistical analysis & scientific writing",
+      ],
+    },
+    {
+      category: "Tools",
+      items: [
+        "Excel",
+        "PowerPoint",
+        "Power BI",
+        "Google Sheets / Apps Script",
+        "Python",
+        "SQL",
+        "Bash",
+        "Fluent working English",
+      ],
+    },
+  ],
+  certifications: [
+    "Biosafety certificate — Pasteur Institute (2021)",
+    "Top 50 HIS-COVID Innovations 2021 — Vietnam Ministry of Science and Technology (Entry No. 9)",
+    "ORCID: 0000-0002-2706-9572",
+  ],
+  achievements: [
+    "First-author: Hara A., Nguyen M. Phat, Tsujiguchi H., et al. \"Effect of β3-adrenergic receptor gene polymorphism and lifestyle on overweight in Japanese rural residents: a cross-sectional study.\" Obesity Science & Practice. 2021;8(2):199-207.",
+    "Co-author: Suzuki K., Tsujiguchi H., Miyagi S., Nguyen M. Phat, et al. \"Association between serum 25-hydroxyvitamin D concentrations and chronic pain: Effects of drinking habits.\" Journal of Pain Research. 2020;13:2987-2996.",
+  ],
+};
+
 export const resumes: Record<string, ResumeData> = {
   default: defaultResume,
   // Per-job variants live here. Each key becomes a clean URL at
@@ -1351,6 +1488,7 @@ export const resumes: Record<string, ResumeData> = {
   "bioturing-product-specialist": bioturingProductSpecialistResume,
   "who-ethics-intern": whoEthicsInternResume,
   "abbott-science-content": abbottScienceContentResume,
+  "longchau-lab-ops": longchauLabOpsResume,
 };
 
 export const resumeData = resumes.default;
