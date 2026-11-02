@@ -15,9 +15,10 @@ const H = ({ children, first = false }: { children: React.ReactNode; first?: boo
 const Bullets = ({ items }: { items?: string[] }) =>
   items && items.length > 0 ? (
     <ul className="list-disc ml-4 space-y-0.5">
-      {items.map((t, i) => (
-        <li key={i}>{t}</li>
-      ))}
+      {items.map((t, i) => {
+        const m = t.match(/^\*\*(.+?)\*\*\s*([\s\S]*)$/);
+        return <li key={i}>{m ? <><strong>{m[1]}</strong> {m[2]}</> : t}</li>;
+      })}
     </ul>
   ) : null;
 
@@ -67,6 +68,7 @@ export default function ResumeHTMLTwoColumn({ data }: { data: ResumeData }) {
                     <span className="text-[11px] text-gray-600 whitespace-nowrap">{pr.period}</span>
                   </div>
                   {pr.role && <div className="italic text-[#1f3a68] text-[11px]">{pr.role}</div>}
+                  {pr.lead && <p className="mb-0.5">{pr.lead}</p>}
                   <Bullets items={pr.achievements} />
                 </div>
               ))}

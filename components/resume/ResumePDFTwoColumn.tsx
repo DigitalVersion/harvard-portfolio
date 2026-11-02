@@ -44,13 +44,19 @@ const styles = StyleSheet.create({
   small: { fontSize: 8 },
 });
 
+// A bullet may open with a bold label written as "**Label:** rest".
+const boldLabel = (t: string) => {
+  const m = t.match(/^\*\*(.+?)\*\*\s*([\s\S]*)$/);
+  return m ? [<Text key="b" style={{ fontWeight: "bold" }}>{m[1]}</Text>, ` ${m[2]}`] : t;
+};
+
 const Bullets = ({ items }: { items?: string[] }) =>
   items && items.length > 0 ? (
     <View>
       {items.map((t, i) => (
         <View key={i} style={styles.bullet}>
           <Text style={styles.dot}>•</Text>
-          <Text style={styles.btext}>{t}</Text>
+          <Text style={styles.btext}>{boldLabel(t)}</Text>
         </View>
       ))}
     </View>
@@ -113,6 +119,7 @@ const ResumePDFTwoColumn = ({ data, type = "default" }: Props) => {
                       {pr.period && <Text style={styles.date}>{pr.period}</Text>}
                     </View>
                     {pr.role && <Text style={styles.role}>{pr.role}</Text>}
+                    {pr.lead && <Text style={{ marginBottom: 1 }}>{pr.lead}</Text>}
                     <Bullets items={pr.achievements} />
                   </View>
                 ))}

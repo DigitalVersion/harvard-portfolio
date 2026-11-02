@@ -49,6 +49,8 @@ export interface ExperienceItem {
 
 export interface ProjectItem {
   title: string;
+  /** Two-column only: one-sentence lead shown under the role line. */
+  lead?: string;
   role?: string;
   period?: string;
   location?: string;

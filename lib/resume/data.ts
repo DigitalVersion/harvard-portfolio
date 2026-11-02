@@ -1699,21 +1699,22 @@ const sisEnResume: ResumeData = {
     linkedin: null,
   },
   summary:
-    "M.Sc. in Medical Sciences (Kanazawa University) working in applied science and automation in healthcare; currently building AI-assisted CAD and FEA workflows for interventional device design. Five years in a molecular biology laboratory; English-taught research with two international publications.",
+    "M.Sc. in Medical Sciences (Kanazawa University) working in applied science and automation in healthcare; currently developing parametric CAD and FEA workflows for stent design, with AI-assisted automation. Five years in a molecular biology laboratory; English-taught research with two international publications.",
   sectionTitles: { projects: "Projects (independent / open source)" },
   projects: [
     {
-      title: "AI-assisted parametric CAD and FEA pipeline — stent case study (in-silico)",
-      role: "Design and simulation workflow built on Open Stent Design (Craig Bonsignore, CC-BY-SA) · stent.agentdo.agency",
+      title: "AI-Assisted Parametric CAD and FEA Pipeline — Stent Case Study (in-silico)",
+      role: "Independent engineering project · stent.agentdo.agency",
+      lead: "Analytical and simulation-based workflow for stent design, built on the open-source Open Stent Design project by Craig Bonsignore (CC BY-SA).",
       period: "08/2026 – present",
       url: "https://stent.agentdo.agency",
       achievements: [
-        "Port and golden test: ported the Open Stent Design formulas from Python to TypeScript; a golden test confirms agreement to 14 significant digits.",
-        "Optimisation: ran a multi-objective NSGA-II loop (pymoo) over the analytical model and merged the runs into a Pareto front (5 seeds × 40 generations × 30 candidates).",
-        "CAD: built the parametric CAD pipeline with AI coding assistants: iterated quickly in Autodesk Fusion, then reproduced the final design in SolidWorks from the same parameters through C# and Python API scripts (CAD volume within 0.03 % of the analytical value); exported STEP, F3D, SLDPRT and DXF/PDF laser-cut drawings.",
-        "FEA: Abaqus Standard/Explicit with superelastic nitinol: unit-cell crimp with a mesh check, full-stent beam load cases (bending, stretch, twist) and a preliminary Explicit crimp.",
-        "Design review: the loop checks results against published limits (referenced: FDA 2005 fatigue guidance via Pelton 2008, ASTM F2606) and ranks geometric parameters by sensitivity to choose the next iteration.",
-        "Traceability: every figure tagged source, derived or assumed; a catalogue of 14 toolchain errors and 11 detection rules; a 3D web page of 9 stent generations.",
+        "**Model validation:** Ported the original Python formulas to TypeScript and built golden tests confirming numerical agreement to 14 significant digits.",
+        "**Multi-objective optimization:** Applied NSGA-II (pymoo) to explore design trade-offs and generate Pareto fronts across five independent runs of 40 generations × 30 candidates.",
+        "**Parametric CAD:** Built the CAD workflow with AI coding assistants in Autodesk Fusion and reproduced the final design in SolidWorks from the same parameters through C# and Python API scripts; CAD volume within 0.03 % of the analytical model; exported STEP, F3D, SLDPRT and DXF/PDF laser-cut drawings.",
+        "**Finite element analysis:** Ran Abaqus Standard/Explicit simulations of superelastic nitinol: unit-cell crimping with mesh checks; full-stent bending, stretching and twisting (beam model); preliminary Explicit crimp.",
+        "**Engineering evaluation:** Checked results against published limits (FDA 2005 fatigue guidance via Pelton 2008; ASTM F2606 referenced) and ranked geometric parameters by sensitivity to guide the next design iteration.",
+        "**Verification and traceability:** Tagged every figure as source, derived or assumed; documented 14 toolchain error types and 11 detection rules; built a 3D visualization of nine stent generations.",
       ],
     },
     {
@@ -1721,21 +1722,21 @@ const sisEnResume: ResumeData = {
       role: "Fork of OpenELIS Global 2, developed by DIGI, University of Washington",
       period: "10/2026 – present",
       achievements: [
-        "Deploys and runs the fork for one private laboratory in Dong Thap, in a parallel trial since 10/2026, with a Vietnamese interface and result reading from 4 analysers (in trial).",
+        "Deploys and runs the fork for one private laboratory in Dong Thap, in a parallel trial since 10/2026, with a Vietnamese interface and analyser interfacing for four instruments (in trial).",
         "Contributed upstream PR #4724 (multi-architecture container images, merged 15/10/2026), with 6 further PRs open; Vietnamese Language Coordinator by invitation of DIGI, University of Washington.",
       ],
     },
   ],
   experience: [
     {
-      company: "Vinh Long Provincial Public Service",
+      company: "Vinh Long Province, public sector",
       position: "",
       location: "Vinh Long, Vietnam",
       startDate: "05/2021",
       endDate: "present",
       projects: [
         {
-          name: "Technical officer, Molecular Biology Laboratory — CDC Vinh Long",
+          name: "Technical Officer, Molecular Biology Laboratory | Vinh Long CDC",
           period: "05/2021 – 04/2026",
           achievements: [
             "Helped set up the new BSL-2 molecular biology laboratory: installed and ran the real-time PCR system, automated extractor and biosafety cabinet; wrote the SOPs; trained staff on the equipment.",
@@ -1744,7 +1745,7 @@ const sisEnResume: ResumeData = {
           ],
         },
         {
-          name: "Specialist, Innovation & Digital Transformation Center — Department of Science and Technology",
+          name: "Specialist, Innovation & Digital Transformation Center | Vinh Long Department of Science and Technology",
           period: "05/2026 – present",
           achievements: [
             "Supports local businesses and startups applying AI and digital technology to operations; designs and teaches applied-AI and digital-transformation training for provincial staff.",
@@ -1766,7 +1767,7 @@ const sisEnResume: ResumeData = {
     },
   ],
   experienceNotes: [
-    { label: "Earlier", text: "laboratory supplies sales; hospital data analysis with Power BI, Mekong Delta (2015–2018)." },
+    { label: "Earlier", text: "Laboratory supply sales; hospital data analysis with Power BI, Mekong Delta (2015–2018)." },
   ],
   education: [
     {
@@ -1775,7 +1776,7 @@ const sisEnResume: ResumeData = {
       location: "Kanazawa, Japan",
       startYear: "2018",
       graduationYear: "2020",
-      bullets: ["Environmental and preventive medicine; programme and research in English; collected health check-up data for two published studies."],
+      bullets: ["Environmental and preventive medicine; programme and research conducted in English; collected health check-up data for two published studies."],
     },
     {
       institution: "Can Tho University of Medicine and Pharmacy",
@@ -1790,7 +1791,7 @@ const sisEnResume: ResumeData = {
     { category: "FEA & optimisation", items: ["Abaqus Standard/Explicit (superelastic nitinol; solid and beam models)", "CalculiX", "mesh convergence checks", "NSGA-II (pymoo)", "Pareto fronts", "golden testing"] },
     { category: "Laboratory", items: ["SOP writing", "equipment installation and operation", "BSL-2", "real-time PCR", "in-house positive controls", "barcode traceability", "user training"] },
     { category: "Software & data", items: ["Python", "TypeScript", "SQL", "Google Apps Script", "Power BI", "Linux", "Git"] },
-    { category: "Languages", items: ["English (IELTS 6.5; English-taught M.Sc., international publications)", "Vietnamese (native)"] },
+    { category: "Languages", items: ["English (IELTS 6.5; M.Sc. programme and research conducted in English; international publications)", "Vietnamese (native)"] },
   ],
   publications: [
     "Co-first author (contributed equally): Hara A., Nguyen M. Phat, et al. Effect of β3-adrenergic receptor gene polymorphism and lifestyle on overweight in Japanese rural residents. Obesity Science & Practice. 2021;8(2):199–207.",
