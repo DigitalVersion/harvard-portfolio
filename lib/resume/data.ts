@@ -1553,7 +1553,7 @@ const sisCdc: ExperienceItem = {
       endDate: "04/2026",
       achievements: [
         "Lắp đặt, vận hành hệ realtime PCR, máy tách chiết tự động, tủ an toàn sinh học cho phòng xét nghiệm sinh học phân tử mới (an toàn sinh học cấp 2) năm 2021; trực tiếp viết SOP và đào tạo nhân sự vận hành máy.",
-        "Tự thiết kế và lập trình hệ truy xuất mẫu mã vạch (Google Sheets, Apps Script), nâng công suất lên khoảng 40 đĩa PCR 96 giếng mỗi ngày (từ dưới 300 mẫu/ngày lúc đầu) và giảm khoảng 40 % thời gian trả kết quả nhờ thiết kế lại quy trình và bố trí đĩa; dùng làm quy trình chung cấp tỉnh trong cao điểm đại dịch; Top 50 sáng kiến HIS-COVID 2021 (Bộ Khoa học và Công nghệ).",
+        "Tự thiết kế và lập trình hệ truy xuất mẫu mã vạch (Google Sheets, Apps Script), nâng công suất từ dưới 300 lên khoảng 4.000 mẫu/ngày (xét nghiệm gộp mẫu) và giảm khoảng 40 % thời gian trả kết quả nhờ thiết kế lại quy trình và bố trí đĩa; dùng làm quy trình chung cấp tỉnh trong cao điểm đại dịch; Top 50 sáng kiến HIS-COVID 2021 (Bộ Khoa học và Công nghệ).",
         "Tạo mẫu chứng dương PCR nội bộ để kiểm soát chất lượng xét nghiệm; trực tiếp làm xét nghiệm miễn dịch, PCR (viêm gan, giun đũa chó, SARS-CoV-2) và soi tươi ký sinh trùng đường ruột.",
         "Huấn luyện nhân viên y tế tuyến đầu kỹ thuật lấy mẫu trong đại dịch COVID-19; báo cáo kết quả xét nghiệm cho hệ thống ứng phó dịch cấp tỉnh khi được yêu cầu.",
       ],
@@ -1582,7 +1582,7 @@ const sisRdResume: ResumeData = {
     website: "https://stent.agentdo.agency",
   },
   summary:
-    "Thạc sĩ Khoa học Y khoa tại Đại học Kanazawa, làm ứng dụng khoa học và tự động hoá trong y tế. Trong dự án stent nitinol tự bung trên nền Open Stent Design, đã đi trọn quy trình từ thiết kế tham số, tối ưu NSGA-II, dựng CAD SolidWorks/Fusion đến mô phỏng Abaqus. Có 5 năm làm việc tại phòng xét nghiệm CDC: dựng phòng lab mới, viết SOP, vận hành hệ mã vạch khoảng 40 đĩa PCR 96 giếng/ngày và đạt Top 50 HIS-COVID 2021. Sử dụng tiếng Anh hằng ngày và đã công bố hai bài báo quốc tế.",
+    "Thạc sĩ Khoa học Y khoa tại Đại học Kanazawa, làm ứng dụng khoa học và tự động hoá trong y tế. Trong dự án stent nitinol tự bung trên nền Open Stent Design, đã đi trọn quy trình từ thiết kế tham số, tối ưu NSGA-II, dựng CAD SolidWorks/Fusion đến mô phỏng Abaqus. Có 5 năm làm việc tại phòng xét nghiệm CDC: dựng phòng lab mới, viết SOP, vận hành hệ mã vạch khoảng 4.000 mẫu/ngày (xét nghiệm gộp mẫu) và đạt Top 50 HIS-COVID 2021. Sử dụng tiếng Anh hằng ngày và đã công bố hai bài báo quốc tế.",
   education: [
     {
       institution: "Đại học Kanazawa, Nhật Bản",
@@ -1703,16 +1703,17 @@ const sisEnResume: ResumeData = {
   sectionTitles: { projects: "Projects (independent / open source)" },
   projects: [
     {
-      title: "Self-expanding nitinol stent for peripheral arteries (in-silico)",
+      title: "AI-assisted parametric CAD and FEA pipeline — stent case study (in-silico)",
       role: "Design and simulation workflow built on Open Stent Design (Craig Bonsignore, CC-BY-SA) · stent.agentdo.agency",
       period: "08/2026 – present",
       url: "https://stent.agentdo.agency",
       achievements: [
-        "Ported the Open Stent Design formulas from Python to TypeScript (golden test: agreement to 14 significant digits); ran NSGA-II optimisation (pymoo, 5 seeds × 40 generations × 30 candidates) that selected 17 crowns per ring, 10 rings, strut width 0.154 mm, wall 0.150 mm, cut tube Ø1.92 mm, shape-set Ø8.0 mm for a Ø6.5 mm vessel.",
-        "Built CAD models in SolidWorks (Wrap onto a tube) and Autodesk Fusion; exported STEP, F3D, SLDPRT and flat DXF/PDF laser-cut drawings; CAD volume within 0.03 % of the analytical value.",
-        "Ran Abaqus FEA on one superelastic nitinol ring cell crimped from Ø8.0 to Ø1.92 mm (mesh-checked), full-stent beam load cases (bending 30°/90°, 5 % stretch, 45° twist) and a preliminary Explicit crimp.",
-        "Peak crimp strain about 21 % exceeds the published 8–12 % range (referenced: FDA 2005 fatigue guidance via Pelton 2008, ASTM F2606); a geometric sensitivity analysis found strut length the strongest parameter and points to longer, narrower struts (1.6 mm × 0.12 mm) as the next iteration.",
-        "Kept traceable design notes (every figure tagged source, derived or assumed), a catalogue of 14 toolchain errors and 11 detection rules; published a 3D web page of 9 stent generations; automated the CAD–optimisation–FEA loop with Python and C# scripts driving the SolidWorks API and Abaqus, written with AI coding assistants.",
+        "Port and golden test: ported the Open Stent Design formulas from Python to TypeScript; a golden test confirms agreement to 14 significant digits.",
+        "Optimisation: ran a multi-objective NSGA-II loop (pymoo) over the analytical model and merged the runs into a Pareto front (5 seeds × 40 generations × 30 candidates).",
+        "CAD: built the parametric CAD pipeline with AI coding assistants: iterated quickly in Autodesk Fusion, then reproduced the final design in SolidWorks from the same parameters through C# and Python API scripts (CAD volume within 0.03 % of the analytical value); exported STEP, F3D, SLDPRT and DXF/PDF laser-cut drawings.",
+        "FEA: Abaqus Standard/Explicit with superelastic nitinol: unit-cell crimp with a mesh check, full-stent beam load cases (bending, stretch, twist) and a preliminary Explicit crimp.",
+        "Design review: the loop checks results against published limits (referenced: FDA 2005 fatigue guidance via Pelton 2008, ASTM F2606) and ranks geometric parameters by sensitivity to choose the next iteration.",
+        "Traceability: every figure tagged source, derived or assumed; a catalogue of 14 toolchain errors and 11 detection rules; a 3D web page of 9 stent generations.",
       ],
     },
     {
