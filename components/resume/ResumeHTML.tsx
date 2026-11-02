@@ -154,12 +154,13 @@ export default function ResumeHTML({ data, origin = "" }: ResumeHTMLProps) {
         ))}
       </section>
 
-      {/* Experience Section */}
-      <section className="mb-4">
+      {/* Experience Section(s) */}
+      {(data.experienceGroups ?? [{ title: L.experience, items: data.experience }]).map((group, gIdx) => (
+      <section key={gIdx} className="mb-4">
         <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-900 pb-1 mb-2">
-          {L.experience}
+          {group.title}
         </h2>
-        {data.experience.map((exp, index) => (
+        {group.items.map((exp, index) => (
           <div key={index} className="mb-3">
             <div className="flex justify-between items-baseline">
               <span className="font-bold text-gray-900 text-sm">{exp.company}</span>
@@ -220,6 +221,7 @@ export default function ResumeHTML({ data, origin = "" }: ResumeHTMLProps) {
           </div>
         ))}
       </section>
+      ))}
 
       {/* Projects Section */}
       {data.projects.length > 0 && (

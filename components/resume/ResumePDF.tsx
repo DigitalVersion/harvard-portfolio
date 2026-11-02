@@ -403,10 +403,11 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => {
         ))}
       </View>
 
-      {/* Experience Section */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>{L.experience}</Text>
-        {data.experience.map((exp, index) => (
+      {/* Experience Section(s) */}
+      {(data.experienceGroups ?? [{ title: L.experience, items: data.experience }]).map((group, gIdx) => (
+      <View key={gIdx} style={styles.section}>
+        <Text style={styles.sectionTitle}>{group.title}</Text>
+        {group.items.map((exp, index) => (
           <View key={index} style={styles.experienceItem}>
             {/* Header + first bullet never split across pages (no orphaned headers) */}
             <View wrap={false}>
@@ -478,6 +479,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => {
           </View>
         ))}
       </View>
+      ))}
 
       {/* Projects Section */}
       {data.projects.length > 0 && (

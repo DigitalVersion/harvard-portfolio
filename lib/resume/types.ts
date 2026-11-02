@@ -103,6 +103,10 @@ export interface ResumeData {
   summary?: string;
   education: EducationItem[];
   experience: ExperienceItem[];
+  /** Optional: split experience into several titled sections (e.g. research
+   * projects vs employment). When set, replaces the single Experience section
+   * in both web and PDF views. */
+  experienceGroups?: { title: string; items: ExperienceItem[] }[];
   skills: SkillCategory[];
   projects: ProjectItem[];
   codingProfiles?: CodingProfile[];
