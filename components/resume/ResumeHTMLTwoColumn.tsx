@@ -77,9 +77,9 @@ export default function ResumeHTMLTwoColumn({ data }: { data: ResumeData }) {
           {data.experience.map((exp, i) => (
             <div key={i} className="mb-2">
               <div className="flex justify-between gap-2">
-                <span className="font-bold">{exp.company}</span>
+                <span className={exp.compact ? "font-semibold" : "font-bold"}>{exp.company}</span>
                 <span className="text-[11px] text-gray-600 whitespace-nowrap">
-                  {exp.startDate} – {exp.endDate}
+                  {exp.dateLabel ?? `${exp.startDate} – ${exp.endDate}`}
                 </span>
               </div>
               {exp.position && <div className="italic text-[#1f3a68] text-[11px]">{exp.position}</div>}

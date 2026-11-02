@@ -124,10 +124,8 @@ const ResumePDFTwoColumn = ({ data, type = "default" }: Props) => {
               {data.experience.map((exp, i) => (
                 <View key={i} style={styles.item}>
                   <View style={styles.row}>
-                    <Text style={styles.title}>{exp.company}</Text>
-                    <Text style={styles.date}>
-                      {exp.startDate} – {exp.endDate}
-                    </Text>
+                    <Text style={exp.compact ? styles.subTitle : styles.title}>{exp.company}</Text>
+                    <Text style={styles.date}>{exp.dateLabel ?? `${exp.startDate} – ${exp.endDate}`}</Text>
                   </View>
                   {exp.position && <Text style={styles.role}>{exp.position}</Text>}
                   <Bullets items={exp.achievements} />

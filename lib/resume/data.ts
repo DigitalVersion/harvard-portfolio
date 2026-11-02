@@ -1699,7 +1699,7 @@ const sisEnResume: ResumeData = {
     linkedin: null,
   },
   summary:
-    "M.Sc. in Medical Sciences (Kanazawa University) working in applied science and automation in healthcare. That work runs from a barcode PCR laboratory workflow during five years of Vinh Long provincial public service, through OpenELIS Vietnam, an open-source laboratory information system, to an independent self-expanding nitinol stent design taken from parametric model through NSGA-II optimisation and SolidWorks CAD to Abaqus FEA. Research conducted in English, with two international publications.",
+    "M.Sc. in Medical Sciences (Kanazawa University) working in applied science and automation in healthcare; currently building AI-assisted CAD and FEA workflows for interventional device design. Five years in a molecular biology laboratory; English-taught research with two international publications.",
   sectionTitles: { projects: "Projects (independent / open source)" },
   projects: [
     {
@@ -1710,9 +1710,9 @@ const sisEnResume: ResumeData = {
       achievements: [
         "Ported the Open Stent Design formulas from Python to TypeScript (golden test: agreement to 14 significant digits); ran NSGA-II optimisation (pymoo, 5 seeds × 40 generations × 30 candidates) that selected 17 crowns per ring, 10 rings, strut width 0.154 mm, wall 0.150 mm, cut tube Ø1.92 mm, shape-set Ø8.0 mm for a Ø6.5 mm vessel.",
         "Built CAD models in SolidWorks (Wrap onto a tube) and Autodesk Fusion; exported STEP, F3D, SLDPRT and flat DXF/PDF laser-cut drawings; CAD volume within 0.03 % of the analytical value.",
-        "Ran Abaqus FEA on one superelastic nitinol ring cell crimped from Ø8.0 to Ø1.92 mm (peak crown strain about 21 %, mesh-checked), full-stent beam load cases (bending 30°/90°, 5 % stretch, 45° twist) and a preliminary Explicit crimp.",
-        "Referenced published strain limits (8–12 %) and radial force (0.39–1.7 N/cm); a geometric sensitivity analysis found strut length the strongest parameter, pointing to a proposed trial design with 1.6 mm long, 0.12 mm wide struts.",
-        "Kept traceable design notes (every figure tagged source, derived or assumed), a catalogue of 14 toolchain errors and 11 detection rules; published a 3D web page of 9 stent generations; automated the CAD–optimisation–FEA loop with Python scripts and AI.",
+        "Ran Abaqus FEA on one superelastic nitinol ring cell crimped from Ø8.0 to Ø1.92 mm (mesh-checked), full-stent beam load cases (bending 30°/90°, 5 % stretch, 45° twist) and a preliminary Explicit crimp.",
+        "Peak crimp strain about 21 % exceeds the published 8–12 % range (referenced: FDA 2005 fatigue guidance via Pelton 2008, ASTM F2606); a geometric sensitivity analysis found strut length the strongest parameter and points to longer, narrower struts (1.6 mm × 0.12 mm) as the next iteration.",
+        "Kept traceable design notes (every figure tagged source, derived or assumed), a catalogue of 14 toolchain errors and 11 detection rules; published a 3D web page of 9 stent generations; automated the CAD–optimisation–FEA loop with Python and C# scripts driving the SolidWorks API and Abaqus, written with AI coding assistants.",
       ],
     },
     {
@@ -1728,7 +1728,7 @@ const sisEnResume: ResumeData = {
   experience: [
     {
       company: "Vinh Long Provincial Public Service",
-      position: "Five years in the same provincial system; transferred between units in 05/2026",
+      position: "",
       location: "Vinh Long, Vietnam",
       startDate: "05/2021",
       endDate: "present",
@@ -1738,7 +1738,7 @@ const sisEnResume: ResumeData = {
           period: "05/2021 – 04/2026",
           achievements: [
             "Helped set up the new BSL-2 molecular biology laboratory: installed and ran the real-time PCR system, automated extractor and biosafety cabinet; wrote the SOPs; trained staff on the equipment.",
-            "Designed and programmed a barcode traceability system (Google Sheets, Apps Script): about 40 PCR plates (96-well) per day, up from under 300 samples per day; turnaround about 40 % shorter; used as the shared provincial workflow during the pandemic peak; Top 50 HIS-COVID 2021.",
+            "Designed and programmed a barcode traceability system (Google Sheets, Apps Script): from under 300 to about 4,000 samples per day (pooled testing); turnaround about 40 % shorter; used as the shared provincial workflow during the pandemic peak; Top 50 HIS-COVID 2021.",
             "Produced in-house PCR positive controls for quality control and trained front-line health workers in specimen collection during COVID-19.",
           ],
         },
@@ -1751,13 +1751,21 @@ const sisEnResume: ResumeData = {
         },
       ],
     },
+    {
+      company: "Google DeepMind Gemini Personalization program (via Turing)",
+      position: "",
+      location: "Remote",
+      startDate: "04/2026",
+      endDate: "07/2026",
+      dateLabel: "Contract, 04–07/2026",
+      compact: true,
+      achievements: [
+        "Evaluated Vietnamese Gemini responses against Google quality rubrics; daily written English with a US team.",
+      ],
+    },
   ],
   experienceNotes: [
-    {
-      label: "Contract",
-      text: "AI Quality Analyst (Vietnamese), Google DeepMind Gemini Personalization program — via Turing, remote contract, 04–07/2026: evaluated Gemini responses against Google quality rubrics; daily written communication in English with a US team.",
-    },
-    { label: "Earlier", text: "Laboratory supplies sales and data analysis, Mekong Delta (2015–2018)." },
+    { label: "Earlier", text: "laboratory supplies sales; hospital data analysis with Power BI, Mekong Delta (2015–2018)." },
   ],
   education: [
     {
@@ -1779,7 +1787,6 @@ const sisEnResume: ResumeData = {
   skills: [
     { category: "Design & CAD", items: ["SolidWorks (Wrap onto tube, SLDPRT/STEP, laser-cut drawings DXF/PDF)", "Autodesk Fusion", "parametric design in code"] },
     { category: "FEA & optimisation", items: ["Abaqus Standard/Explicit (superelastic nitinol; solid and beam models)", "CalculiX", "mesh convergence checks", "NSGA-II (pymoo)", "Pareto fronts", "golden testing"] },
-    { category: "Referenced", items: ["FDA 2005 fatigue guidance via Pelton 2008", "ASTM F2606 (three-point bending)"] },
     { category: "Laboratory", items: ["SOP writing", "equipment installation and operation", "BSL-2", "real-time PCR", "in-house positive controls", "barcode traceability", "user training"] },
     { category: "Software & data", items: ["Python", "TypeScript", "SQL", "Google Apps Script", "Power BI", "Linux", "Git"] },
     { category: "Languages", items: ["English (IELTS 6.5; English-taught M.Sc., international publications)", "Vietnamese (native)"] },

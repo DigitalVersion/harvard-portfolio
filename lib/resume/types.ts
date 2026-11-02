@@ -34,6 +34,10 @@ export interface ExperienceProject {
 }
 
 export interface ExperienceItem {
+  /** Two-column only: text for the date column instead of "start – end" (e.g. "Contract, 04–07/2026"). */
+  dateLabel?: string;
+  /** Two-column only: render as a small sub-heading (same size as a sub-role). */
+  compact?: boolean;
   company: string;
   position: string;
   location: string;
