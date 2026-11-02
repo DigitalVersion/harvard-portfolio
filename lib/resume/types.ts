@@ -106,7 +106,8 @@ export interface ResumeData {
   /** Optional: split experience into several titled sections (e.g. research
    * projects vs employment). When set, replaces the single Experience section
    * in both web and PDF views. */
-  experienceGroups?: { title: string; items: ExperienceItem[] }[];
+  /** `breakBefore`: PDF only, start this section on a new page (avoids an orphaned heading). */
+  experienceGroups?: { title: string; items: ExperienceItem[]; breakBefore?: boolean }[];
   skills: SkillCategory[];
   projects: ProjectItem[];
   codingProfiles?: CodingProfile[];

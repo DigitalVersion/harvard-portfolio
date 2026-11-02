@@ -1510,7 +1510,7 @@ const sisStent: ExperienceItem = {
         "Mô phỏng phần tử hữu hạn trên Abaqus: một ô vành nitinol siêu đàn hồi (tham số Prasad 2012) ép từ Ø8,0 xuống Ø1,92 mm, biến dạng lớn nhất khoảng 21 % ở chỗ gập, hai mức lưới lệch nhau vài phần trăm; mô hình dầm cả cây (10 vành, 36 cầu nối) thử uốn 30° và 90°, kéo dọc 5 %, xoắn 45°; ép co cả cây bằng Abaqus/Explicit (sơ bộ). Mọi con số là kết quả mô phỏng.",
         "Đối chiếu tài liệu tiếng Anh (Pelton 2008 và khuyến nghị FDA 2005 về mỏi, Alaimo 2017, khuyến nghị dựng FEA cho stent nitinol) để lấy ngưỡng biến dạng 8–12 % và khoảng lực kháng nén công bố 0,39–1,7 N/cm; phân tích độ nhạy các thông số hình học (độ dài thanh, bề rộng thanh, số đỉnh), xác định độ dài thanh là thông số ảnh hưởng mạnh nhất, đề xuất phương án thử thanh dài 1,6 mm, rộng 0,12 mm để đưa biến dạng và lực kháng nén về trong khoảng công bố.",
         "Lập hồ sơ kỹ thuật truy xuất được: mỗi con số dán nhãn [NGUỒN], [SUY RA] hay [GIẢ ĐỊNH]; tổng hợp 14 ca lỗi của chính công cụ (ví dụ chép công thức sang ngôn ngữ khác sai 2,44 lần; dán nhầm nhãn lực xuyên tâm lên lực vòng, sai số 2π) và 11 quy tắc phát hiện lỗi áp dụng trong pipeline.",
-        "Dựng trang web 3D tái hiện 9 thế hệ stent bằng mô hình tham số (xoay, nén, bung; tải được CAD, bản vẽ, kết quả FEA); dùng AI để tự động hoá các bước lặp lại giữa CAD, tối ưu và mô phỏng.",
+        "Dựng trang web 3D tái hiện 9 thế hệ stent bằng mô hình tham số (xoay, nén, bung; tải được CAD, bản vẽ, kết quả FEA); tự động hoá vòng lặp giữa CAD, tối ưu và mô phỏng bằng script Python và AI.",
       ],
     };
 const sisOpenElis: ExperienceItem = {
@@ -1520,9 +1520,8 @@ const sisOpenElis: ExperienceItem = {
       startDate: "10/2026",
       endDate: "nay",
       achievements: [
-        "Triển khai và vận hành bản fork OpenELIS Global 2 cho một phòng xét nghiệm tư nhân tại Đồng Tháp, chạy thử song song với phần mềm cũ từ tháng 10/2026.",
-        "Xây dựng giao diện tiếng Việt, đăng ký bệnh nhân bằng quét QR căn cước, công thức eGFR CKD-EPI 2021, kết nối FHIR R4 (chờ tài khoản tích hợp) và thiết bị biên đọc kết quả từ 4 máy xét nghiệm HORIBA H500, Roche cobas e411, Beckman AU680, SQA-iO (đang chạy thử).",
-        "Đóng góp mã nguồn mở cho dự án gốc: PR #4724 (ảnh container đa kiến trúc amd64 + arm64) được nhận ngày 15/10/2026, 6 PR khác đang chờ duyệt; điều phối viên ngôn ngữ tiếng Việt trên Transifex do DIGI – Đại học Washington mời, hoàn thành 13.107/13.107 chuỗi.",
+        "Triển khai và vận hành bản fork OpenELIS Global 2 cho một phòng xét nghiệm tư nhân tại Đồng Tháp, chạy thử song song với phần mềm cũ từ tháng 10/2026; xây dựng giao diện tiếng Việt và kết nối đọc kết quả từ 4 máy xét nghiệm (đang chạy thử).",
+        "Đóng góp mã nguồn mở cho dự án gốc: PR #4724 (ảnh container đa kiến trúc amd64 + arm64) được nhận ngày 15/10/2026, 6 PR khác đang chờ duyệt; điều phối viên ngôn ngữ tiếng Việt do DIGI – Đại học Washington mời.",
       ],
     };
 const sisSoKhcn: ExperienceItem = {
@@ -1561,12 +1560,12 @@ const sisCdc: ExperienceItem = {
     };
 const sis2015: ExperienceItem = {
       company: "Các công ty phân phối vật tư xét nghiệm (ĐBSCL)",
-      position: "Nhân viên kinh doanh · làm xét nghiệm bán thời gian · phân tích dữ liệu bệnh viện",
+      position: "Nhân viên kinh doanh vật tư và thiết bị xét nghiệm",
       location: "Cần Thơ",
       startDate: "2015",
       endDate: "2018",
       achievements: [
-        "Kinh doanh vật tư và thiết bị xét nghiệm cho các công ty phân phối; song song làm xét nghiệm bán thời gian và phân tích dữ liệu bằng Power BI tại Bệnh viện Hoàn Mỹ Cửu Long.",
+        "Song song làm xét nghiệm bán thời gian; phân tích dữ liệu bệnh viện bằng Power BI tại Bệnh viện Hoàn Mỹ Cửu Long.",
       ],
     };
 
@@ -1607,7 +1606,7 @@ const sisRdResume: ResumeData = {
   experience: [sisStent, sisOpenElis, sisSoKhcn, sisTuring, sisCdc, sis2015],
   experienceGroups: [
     { title: "Dự án nghiên cứu và kỹ thuật", items: [sisStent, sisOpenElis] },
-    { title: "Kinh nghiệm công tác", items: [sisSoKhcn, sisTuring, sisCdc, sis2015] },
+    { title: "Kinh nghiệm công tác", items: [sisSoKhcn, sisTuring, sisCdc, sis2015], breakBefore: true },
   ],
   skills: [
     {
@@ -1625,7 +1624,7 @@ const sisRdResume: ResumeData = {
         "CalculiX",
         "Kiểm hội tụ lưới",
         "Tối ưu đa mục tiêu NSGA-II (pymoo), mặt Pareto",
-        "Bộ kiểm đối chiếu số Python ↔ TypeScript (golden test)",
+        "Kiểm thử đối chiếu (golden test) giữa Python và TypeScript",
       ],
     },
     {
@@ -1651,7 +1650,7 @@ const sisRdResume: ResumeData = {
     },
     {
       category: "Phần mềm và dữ liệu",
-      items: ["Python", "TypeScript", "SQL", "Google Apps Script", "Power BI", "Linux", "Git", "Dùng AI tự động hoá bước lặp trong quy trình kỹ thuật"],
+      items: ["Python", "TypeScript", "SQL", "Google Apps Script", "Power BI", "Linux", "Git", "Tự động hoá vòng lặp kỹ thuật bằng script Python và AI"],
     },
     {
       category: "Ngôn ngữ",

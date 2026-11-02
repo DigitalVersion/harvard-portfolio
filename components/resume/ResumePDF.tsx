@@ -405,7 +405,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => {
 
       {/* Experience Section(s) */}
       {(data.experienceGroups ?? [{ title: L.experience, items: data.experience }]).map((group, gIdx) => (
-      <View key={gIdx} style={styles.section}>
+      <View key={gIdx} style={styles.section} break={group.breakBefore ?? false}>
         <Text style={styles.sectionTitle}>{group.title}</Text>
         {group.items.map((exp, index) => (
           <View key={index} style={styles.experienceItem}>
