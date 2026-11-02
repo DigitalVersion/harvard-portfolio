@@ -1562,8 +1562,8 @@ const sisRdResume: ResumeData = {
       ],
     },
     {
-      company: "OpenELIS Vietnam (bản fork mã nguồn mở của OpenELIS Global 2 — DIGI, Đại học Washington)",
-      position: "Người triển khai chính · Người đóng góp mã nguồn mở · Điều phối viên ngôn ngữ tiếng Việt",
+      company: "OpenELIS Vietnam",
+      position: "Người triển khai chính · Người đóng góp mã nguồn mở · Điều phối viên tiếng Việt — bản fork mã nguồn mở của OpenELIS Global 2 (DIGI, Đại học Washington)",
       location: "Đồng Tháp / từ xa",
       startDate: "10/2026",
       endDate: "nay",
@@ -1574,8 +1574,8 @@ const sisRdResume: ResumeData = {
       ],
     },
     {
-      company: "Trung tâm Đổi mới sáng tạo và Chuyển đổi số, Sở Khoa học và Công nghệ tỉnh Vĩnh Long",
-      position: "Chuyên viên, Phòng Đổi mới sáng tạo và Khởi nghiệp",
+      company: "Sở Khoa học và Công nghệ tỉnh Vĩnh Long",
+      position: "Chuyên viên, Phòng Đổi mới sáng tạo và Khởi nghiệp — Trung tâm Đổi mới sáng tạo và Chuyển đổi số",
       location: "Vĩnh Long",
       startDate: "05/2026",
       endDate: "nay",
@@ -1595,7 +1595,7 @@ const sisRdResume: ResumeData = {
       ],
     },
     {
-      company: "Các công ty phân phối vật tư, thiết bị xét nghiệm (Đồng bằng sông Cửu Long)",
+      company: "Các công ty phân phối vật tư xét nghiệm (ĐBSCL)",
       position: "Nhân viên kinh doanh · làm xét nghiệm bán thời gian · phân tích dữ liệu bệnh viện",
       location: "Cần Thơ",
       startDate: "2015",
