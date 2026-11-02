@@ -1,5 +1,5 @@
 import { Document, Page, Text, View, StyleSheet, Link, Svg, Path, Rect, Font } from "@react-pdf/renderer";
-import type { ResumeData } from "@/lib/resume/types";
+import { SECTION_LABELS, type ResumeData } from "@/lib/resume/types";
 
 // Register Roboto font (supports Vietnamese and other extended Latin characters)
 Font.register({
@@ -293,7 +293,9 @@ interface ResumePDFProps {
   origin?: string;
 }
 
-const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
+const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => {
+  const L = SECTION_LABELS[data.lang ?? "en"];
+  return (
   <Document title={`Resume - ${data.personal.name} (${type})`}>
     <Page size="A4" style={styles.page}>
       {/* Header Section */}
@@ -364,14 +366,14 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
       {/* Summary Section */}
       {data.summary && (
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Summary</Text>
+          <Text style={styles.sectionTitle}>{L.summary}</Text>
           <Text style={{ fontSize: 10, color: "#000000", lineHeight: 1.4 }}>{data.summary}</Text>
         </View>
       )}
 
       {/* Education Section */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Education</Text>
+        <Text style={styles.sectionTitle}>{L.education}</Text>
         {data.education.map((edu, index) => (
           <View key={index} style={styles.educationItem}>
             <View style={styles.educationRow}>
@@ -403,7 +405,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
 
       {/* Experience Section */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Experience</Text>
+        <Text style={styles.sectionTitle}>{L.experience}</Text>
         {data.experience.map((exp, index) => (
           <View key={index} style={styles.experienceItem}>
             {/* Header + first bullet never split across pages (no orphaned headers) */}
@@ -480,7 +482,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
       {/* Projects Section */}
       {data.projects.length > 0 && (
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Projects</Text>
+        <Text style={styles.sectionTitle}>{L.projects}</Text>
         {data.projects.map((project, index) => {
           const formattedUrl = resolveUrl(
             project.evidence || project.link || project.url || project.githubUrl || project.liveUrl,
@@ -538,7 +540,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
 
       {/* Skills Section */}
       <View style={styles.section} wrap={false}>
-        <Text style={styles.sectionTitle}>Skills</Text>
+        <Text style={styles.sectionTitle}>{L.skills}</Text>
         <View style={styles.skillsContainer}>
           {data.skills.map((skillCategory, index) => (
             <View key={index} style={{ marginBottom: 2 }}>
@@ -554,7 +556,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
       {/* Coding Profiles Section */}
       {data.codingProfiles && data.codingProfiles.length > 0 && (
         <View style={styles.section} wrap={false}>
-          <Text style={styles.sectionTitle}>Coding Profiles</Text>
+          <Text style={styles.sectionTitle}>{L.codingProfiles}</Text>
           <View style={styles.profilesContainer}>
             {data.codingProfiles.map((profile, index) => (
               <View key={index} style={styles.profileColumn}>
@@ -575,7 +577,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
       {data.achievements && data.achievements.length > 0 && (
         <View style={styles.section}>
           <View wrap={false}>
-            <Text style={styles.sectionTitle}>Achievements</Text>
+            <Text style={styles.sectionTitle}>{L.achievements}</Text>
             <View style={styles.achievementItem}>
               <Text style={styles.achievementBullet}>•</Text>
               <Text style={styles.achievementText}>{data.achievements[0]}</Text>
@@ -593,7 +595,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
       {/* Certifications Section */}
       {data.certifications && data.certifications.length > 0 && (
         <View style={styles.section} wrap={false}>
-          <Text style={styles.sectionTitle}>Certifications</Text>
+          <Text style={styles.sectionTitle}>{L.certifications}</Text>
           {data.certifications.map((cert, index) => (
             <Text key={index} style={styles.certificationText}>
               {cert}
@@ -603,6 +605,7 @@ const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => (
       )}
     </Page>
   </Document>
-);
+  );
+};
 
 export default ResumePDF;

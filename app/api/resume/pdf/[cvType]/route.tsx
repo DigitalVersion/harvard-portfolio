@@ -36,7 +36,15 @@ export async function GET(_request: Request, { params }: { params: Promise<{ cvT
     <ResumePDF data={data} type={cvType} origin={SITE_ORIGIN} />
   );
 
-  const filename = `Resume_${cvType}_${data.personal.name.replace(/\s+/g, "_")}.pdf`;
+  // HTTP headers are Latin-1 only: strip diacritics (e.g. "Nguyễn" -> "Nguyen")
+  // so names with Vietnamese marks don't throw at build time.
+  const asciiName = data.personal.name
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d")
+    .replace(/Đ/g, "D")
+    .replace(/\s+/g, "_");
+  const filename = `Resume_${cvType}_${asciiName}.pdf`;
 
   return new Response(new Uint8Array(buffer), {
     headers: {

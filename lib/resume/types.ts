@@ -66,7 +66,39 @@ export interface CodingProfile {
   url: string;
 }
 
+export type ResumeLang = "en" | "vi";
+
+/** Section headings per language. Web view and PDF both read from here so
+ * they never drift apart. */
+export const SECTION_LABELS: Record<ResumeLang, Record<
+  "summary" | "education" | "experience" | "projects" | "skills" | "codingProfiles" | "achievements" | "certifications",
+  string
+>> = {
+  en: {
+    summary: "Summary",
+    education: "Education",
+    experience: "Experience",
+    projects: "Projects",
+    skills: "Skills",
+    codingProfiles: "Coding Profiles",
+    achievements: "Achievements",
+    certifications: "Certifications",
+  },
+  vi: {
+    summary: "Tóm tắt",
+    education: "Học vấn",
+    experience: "Kinh nghiệm",
+    projects: "Dự án",
+    skills: "Kỹ năng",
+    codingProfiles: "Hồ sơ lập trình",
+    achievements: "Thành tích và công bố",
+    certifications: "Chứng chỉ",
+  },
+};
+
 export interface ResumeData {
+  /** Language of the section headings (content language is up to the data). Defaults to "en". */
+  lang?: ResumeLang;
   personal: PersonalInfo;
   summary?: string;
   education: EducationItem[];

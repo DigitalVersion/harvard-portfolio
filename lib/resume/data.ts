@@ -1484,6 +1484,194 @@ const longchauLabOpsResume: ResumeData = {
   ],
 };
 
+// SIS Việt Nam — Kỹ sư nghiên cứu và phát triển sản phẩm (R&D), thiết bị can
+// thiệp mạch máu (catheter, stent, coil). Vietnamese CV (lang: "vi"), ordered
+// to the JD's five duty groups: design (parametric + CAD), prototyping/testing
+// (simulation + literature-based design improvement), design control
+// (traceable design notes, tool-error catalogue), technical documentation,
+// transfer. Prose via /nha-van (NotebookLM, one idea per ask) + humanizer
+// pass; facts from 11_operator/profile.md, form-fill.md, and the stent
+// campaign's HO-SO-SU-THAT.md / stent-ring.md. Honesty gates: degrees are
+// exactly "Cử nhân Kỹ thuật Xét nghiệm Y học" and "Thạc sĩ Khoa học Y khoa
+// (Medical Sciences)"; geometry/formulas credited to Open Stent Design
+// (Bonsignore); every stent figure is simulation only; no ISO 13485/14971,
+// AutoCAD, fabrication, or bench-test claims; no customer name for the
+// OpenELIS pilot; "parallel trial", not "replaced"; pandemic-peak scoping for
+// the provincial barcode workflow; Turing feature name withheld.
+const sisRdResume: ResumeData = {
+  lang: "vi",
+  personal: {
+    name: "Nguyễn Minh Phát",
+    title: "Thạc sĩ Khoa học Y khoa · Thiết kế tham số, CAD và mô phỏng stent nitinol",
+    email: "minhphat1@gmail.com",
+    phone: "0856 004 115",
+    location: "Cần Thơ, Việt Nam",
+    github: "https://github.com/kanazawahere",
+    linkedin: "https://www.linkedin.com/in/phat-nguyen-9b53365a",
+    website: "https://stent.agentdo.agency",
+  },
+  summary:
+    "Thạc sĩ Khoa học Y khoa tại Đại học Kanazawa, làm ứng dụng khoa học và tự động hoá trong y tế. Trong dự án stent nitinol tự bung trên nền Open Stent Design, đã đi trọn quy trình từ thiết kế tham số, tối ưu NSGA-II, dựng CAD SolidWorks/Fusion đến mô phỏng Abaqus (mọi kết quả là mô phỏng). Có 5 năm làm việc tại phòng xét nghiệm CDC: dựng phòng lab mới, viết SOP, vận hành hệ mã vạch khoảng 4.000 mẫu/ngày và đạt Top 50 HIS-COVID 2021. Sử dụng tiếng Anh hằng ngày và đã công bố hai bài báo quốc tế.",
+  education: [
+    {
+      institution: "Đại học Kanazawa, Nhật Bản",
+      degree: "Thạc sĩ Khoa học Y khoa (Medical Sciences) — hướng y học dự phòng và môi trường",
+      location: "Kanazawa, Nhật Bản",
+      startYear: "2018",
+      graduationYear: "2020",
+      bullets: [
+        "Chương trình học và nghiên cứu bằng tiếng Anh; trực tiếp thu thập dữ liệu khám sức khoẻ cho hai nghiên cứu đã công bố quốc tế.",
+        "Tác giả đứng đầu một bài (Obesity Science & Practice, Wiley, 2021) và đồng tác giả một bài (Journal of Pain Research, 2020).",
+      ],
+    },
+    {
+      institution: "Đại học Y Dược Cần Thơ",
+      degree: "Cử nhân Kỹ thuật Xét nghiệm Y học",
+      location: "Cần Thơ, Việt Nam",
+      startYear: "2011",
+      graduationYear: "2015",
+    },
+  ],
+  experience: [
+    {
+      company: "Dự án cá nhân — Thiết kế stent nitinol tự bung cho mạch ngoại biên",
+      position: "Tự thực hiện toàn bộ: thiết kế tham số, tối ưu, CAD, mô phỏng, hồ sơ kỹ thuật (trang dự án: stent.agentdo.agency)",
+      location: "Cần Thơ",
+      startDate: "08/2026",
+      endDate: "nay",
+      achievements: [
+        "Chép bộ công thức Open Stent Design (Craig Bonsignore, CC-BY-SA) từ Python sang TypeScript và soát hai bản khớp tới 14 chữ số; dựng vòng tối ưu đa mục tiêu NSGA-II (pymoo) trên mô hình giải tích, 5 hạt giống × 40 thế hệ × 30 phương án, gộp thành mặt Pareto. Bộ tham số chọn ra: 17 đỉnh sóng mỗi vành, 10 vành, thanh rộng 0,154 mm, thành ống 0,150 mm, ống cắt Ø1,92 mm, nung định hình Ø8,0 mm cho mạch Ø6,5 mm.",
+        "Dựng mô hình CAD bằng SolidWorks (Wrap lên ống) và Autodesk Fusion từ đúng bộ tham số đó; xuất STEP, F3D, SLDPRT và bản vẽ cắt laser DXF/PDF có ghi chú tiết diện hình thang do cắt laser hướng tâm. Thể tích CAD lệch 0,03 % so với tính toán giải tích.",
+        "Mô phỏng phần tử hữu hạn trên Abaqus: một ô vành nitinol siêu đàn hồi (tham số Prasad 2012) ép từ Ø8,0 xuống Ø1,92 mm, biến dạng lớn nhất khoảng 21 % ở chỗ gập, hai mức lưới lệch nhau vài phần trăm; mô hình dầm cả cây (10 vành, 36 cầu nối) thử uốn 30° và 90°, kéo dọc 5 %, xoắn 45°; ép co cả cây bằng Abaqus/Explicit (sơ bộ). Mọi con số là kết quả mô phỏng.",
+        "Đối chiếu tài liệu tiếng Anh (Pelton 2008 và khuyến nghị FDA 2005 về mỏi, Alaimo 2017, khuyến nghị dựng FEA cho stent nitinol) để lấy ngưỡng biến dạng 8–12 % và khoảng lực kháng nén công bố 0,39–1,7 N/cm; quét các núm vặn thiết kế (bề rộng thanh, độ dài thanh, số đỉnh), xác định kéo dài thanh là núm mạnh nhất và đề xuất phương án thử thanh dài 1,6 mm, rộng 0,12 mm để đưa biến dạng và lực kháng nén về trong khoảng công bố.",
+        "Lập hồ sơ kỹ thuật truy xuất được: mỗi con số dán nhãn [NGUỒN], [SUY RA] hay [GIẢ ĐỊNH]; tổng hợp 14 ca lỗi của chính công cụ (ví dụ chép công thức sang ngôn ngữ khác sai 2,44 lần; dán nhầm nhãn lực xuyên tâm lên lực vòng, sai số 2π) và 11 quy tắc phát hiện lỗi áp dụng trong pipeline.",
+        "Dựng trang web 3D tái hiện 9 thế hệ stent bằng mô hình tham số (xoay, nén, bung; tải được CAD, bản vẽ, kết quả FEA); dùng AI để tự động hoá các bước lặp lại giữa CAD, tối ưu và mô phỏng.",
+      ],
+    },
+    {
+      company: "Trung tâm Kiểm soát bệnh tật (CDC) tỉnh Vĩnh Long",
+      position: "Kỹ thuật viên xét nghiệm (viên chức, Kỹ thuật y hạng III)",
+      location: "Vĩnh Long",
+      startDate: "05/2021",
+      endDate: "04/2026",
+      achievements: [
+        "Lắp đặt, vận hành hệ realtime PCR, máy tách chiết tự động, tủ an toàn sinh học cho phòng xét nghiệm sinh học phân tử mới (an toàn sinh học cấp 2) năm 2021; trực tiếp viết SOP và đào tạo nhân sự vận hành máy.",
+        "Tự thiết kế và lập trình hệ truy xuất mẫu mã vạch (Google Sheets, Apps Script), nâng công suất từ dưới 300 lên khoảng 4.000 mẫu/ngày và giảm khoảng 40 % thời gian trả kết quả nhờ thiết kế lại quy trình và bố trí đĩa 96 giếng; dùng làm quy trình chung cấp tỉnh trong cao điểm đại dịch; Top 50 sáng kiến HIS-COVID 2021 (Bộ Khoa học và Công nghệ).",
+        "Tạo mẫu chứng dương PCR nội bộ để kiểm soát chất lượng xét nghiệm; trực tiếp làm xét nghiệm miễn dịch, PCR (viêm gan, giun đũa chó, SARS-CoV-2) và soi tươi ký sinh trùng đường ruột.",
+        "Huấn luyện nhân viên y tế tuyến đầu kỹ thuật lấy mẫu trong đại dịch COVID-19; báo cáo kết quả xét nghiệm cho hệ thống ứng phó dịch cấp tỉnh khi được yêu cầu.",
+      ],
+    },
+    {
+      company: "OpenELIS Vietnam (bản fork mã nguồn mở của OpenELIS Global 2 — DIGI, Đại học Washington)",
+      position: "Người triển khai chính · Người đóng góp mã nguồn mở · Điều phối viên ngôn ngữ tiếng Việt",
+      location: "Đồng Tháp / từ xa",
+      startDate: "10/2026",
+      endDate: "nay",
+      achievements: [
+        "Triển khai và vận hành bản fork OpenELIS Global 2 cho một phòng xét nghiệm tư nhân tại Đồng Tháp, chạy thử song song với phần mềm cũ từ tháng 10/2026.",
+        "Xây dựng giao diện tiếng Việt, đăng ký bệnh nhân bằng quét QR căn cước, công thức eGFR CKD-EPI 2021, kết nối FHIR R4 (chờ tài khoản tích hợp) và thiết bị biên đọc kết quả từ 4 máy xét nghiệm HORIBA H500, Roche cobas e411, Beckman AU680, SQA-iO (đang chạy thử).",
+        "Đóng góp mã nguồn mở cho dự án gốc: PR #4724 (ảnh container đa kiến trúc amd64 + arm64) được nhận ngày 15/10/2026, 6 PR khác đang chờ duyệt; điều phối viên ngôn ngữ tiếng Việt trên Transifex do DIGI – Đại học Washington mời, hoàn thành 13.107/13.107 chuỗi.",
+      ],
+    },
+    {
+      company: "Trung tâm Đổi mới sáng tạo và Chuyển đổi số, Sở Khoa học và Công nghệ tỉnh Vĩnh Long",
+      position: "Chuyên viên, Phòng Đổi mới sáng tạo và Khởi nghiệp",
+      location: "Vĩnh Long",
+      startDate: "05/2026",
+      endDate: "nay",
+      achievements: [
+        "Hỗ trợ doanh nghiệp địa phương và dự án khởi nghiệp ứng dụng AI, công nghệ số vào quy trình vận hành.",
+        "Thiết kế và trực tiếp giảng chương trình đào tạo chuyển đổi số, ứng dụng AI cho cán bộ.",
+      ],
+    },
+    {
+      company: "Turing (Mỹ)",
+      position: "Chuyên viên đánh giá chất lượng AI — chương trình liên quan Gemini của Google",
+      location: "Từ xa",
+      startDate: "04/2026",
+      endDate: "07/2026",
+      achievements: [
+        "Đánh giá chất lượng câu trả lời AI tiếng Việt theo bộ tiêu chí chấm và yêu cầu bảo mật dữ liệu, 40 giờ/tuần; báo cáo và giao tiếp hoàn toàn bằng tiếng Anh với đội ở Mỹ.",
+      ],
+    },
+    {
+      company: "Các công ty phân phối vật tư, thiết bị xét nghiệm (Đồng bằng sông Cửu Long)",
+      position: "Nhân viên kinh doanh · làm xét nghiệm bán thời gian · phân tích dữ liệu bệnh viện",
+      location: "Cần Thơ",
+      startDate: "2015",
+      endDate: "2018",
+      achievements: [
+        "Kinh doanh vật tư và thiết bị xét nghiệm cho các công ty phân phối; song song làm xét nghiệm bán thời gian và phân tích dữ liệu bằng Power BI tại Bệnh viện Hoàn Mỹ Cửu Long.",
+      ],
+    },
+  ],
+  skills: [
+    {
+      category: "Thiết kế và CAD",
+      items: [
+        "SolidWorks (dựng vành stent bằng Wrap lên ống, xuất SLDPRT/STEP, bản vẽ cắt laser DXF/PDF)",
+        "Autodesk Fusion (F3D)",
+        "Thiết kế tham số bằng mã (Python, TypeScript)",
+      ],
+    },
+    {
+      category: "Mô phỏng và tối ưu",
+      items: [
+        "Abaqus Standard/Explicit (nitinol siêu đàn hồi; mô hình ô đặc và mô hình dầm)",
+        "CalculiX",
+        "Kiểm hội tụ lưới",
+        "Tối ưu đa mục tiêu NSGA-II (pymoo), mặt Pareto",
+        "Bộ kiểm đối chiếu số Python ↔ TypeScript (golden test)",
+      ],
+    },
+    {
+      category: "Tài liệu kỹ thuật tiếng Anh",
+      items: [
+        "Đọc và đối chiếu bài báo về FEA và mỏi stent nitinol",
+        "Khuyến nghị FDA 2005 về phân tích mỏi (qua Pelton 2008)",
+        "ASTM F2606 (uốn ba điểm)",
+        "Bằng sáng chế chế tạo stent nitinol (cắt laser, nong định hình, đánh bóng điện hoá)",
+        "Viết báo cáo kỹ thuật bằng tiếng Anh",
+      ],
+    },
+    {
+      category: "Quy trình phòng thí nghiệm",
+      items: [
+        "Viết SOP",
+        "Lắp đặt và vận hành thiết bị",
+        "Kiểm soát chất lượng (chứng dương nội bộ)",
+        "Truy xuất mẫu bằng mã vạch",
+        "An toàn sinh học cấp 2",
+        "Đào tạo người dùng",
+      ],
+    },
+    {
+      category: "Phần mềm và dữ liệu",
+      items: ["Python", "TypeScript", "SQL", "Google Apps Script", "Power BI", "Linux", "Git", "Dùng AI tự động hoá bước lặp trong quy trình kỹ thuật"],
+    },
+    {
+      category: "Ngôn ngữ",
+      items: [
+        "Tiếng Việt (bản ngữ)",
+        "Tiếng Anh IELTS 6.5 — học thạc sĩ, viết bài báo quốc tế và làm việc hằng ngày với đội ở Mỹ bằng tiếng Anh",
+      ],
+    },
+  ],
+  projects: [],
+  codingProfiles: [],
+  certifications: [
+    "Chứng chỉ an toàn sinh học — Viện Pasteur (2021)",
+    "Chứng chỉ hoàn thành Google Cloud Gen AI Academy APAC 2026, Cohort 3",
+    "ORCID: 0000-0002-2706-9572",
+  ],
+  achievements: [
+    "Top 50 sáng kiến HIS-COVID 2021 — Bộ Khoa học và Công nghệ (hồ sơ số 9)",
+    "Tác giả đứng đầu: Hara A., Nguyen M. Phat, et al. \"Effect of β3-adrenergic receptor gene polymorphism and lifestyle on overweight in Japanese rural residents.\" Obesity Science & Practice. 2021;8(2):199–207. doi:10.1002/osp4.560",
+    "Đồng tác giả: Suzuki K., Tsujiguchi H., Miyagi S., Nguyen M. Phat, et al. \"Association between serum 25-hydroxyvitamin D concentrations and chronic pain: Effects of drinking habits.\" Journal of Pain Research. 2020;13:2987–2996. doi:10.2147/JPR.S277979",
+    "Điều phối viên ngôn ngữ tiếng Việt, OpenELIS Global (Transifex), 2026 — do Giám đốc sản phẩm OpenELIS Global (DIGI, Đại học Washington) mời",
+  ],
+};
+
 export const resumes: Record<string, ResumeData> = {
   default: defaultResume,
   // Per-job variants live here. Each key becomes a clean URL at
@@ -1502,6 +1690,7 @@ export const resumes: Record<string, ResumeData> = {
   "who-ethics-intern": whoEthicsInternResume,
   "abbott-science-content": abbottScienceContentResume,
   "longchau-lab-ops": longchauLabOpsResume,
+  sis: sisRdResume,
 };
 
 export const resumeData = resumes.default;

@@ -1,6 +1,6 @@
 import { HiExternalLink, HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import type { ResumeData } from "@/lib/resume/types";
+import { SECTION_LABELS, type ResumeData } from "@/lib/resume/types";
 
 interface ResumeHTMLProps {
   data: ResumeData;
@@ -17,6 +17,7 @@ const formatUrl = (url?: string | null, origin = ""): string | null => {
 };
 
 export default function ResumeHTML({ data, origin = "" }: ResumeHTMLProps) {
+  const L = SECTION_LABELS[data.lang ?? "en"];
   return (
     <div className="w-full max-w-[850px] mx-auto bg-white text-gray-900 shadow-2xl rounded-sm p-6 sm:p-10 font-sans leading-relaxed text-sm my-6 border border-gray-200">
       {/* Header Section */}
@@ -118,7 +119,7 @@ export default function ResumeHTML({ data, origin = "" }: ResumeHTMLProps) {
       {data.summary && (
         <section className="mb-4">
           <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-900 pb-1 mb-2">
-            Summary
+            {L.summary}
           </h2>
           <p className="text-xs text-gray-800 leading-relaxed">{data.summary}</p>
         </section>
@@ -127,7 +128,7 @@ export default function ResumeHTML({ data, origin = "" }: ResumeHTMLProps) {
       {/* Education Section */}
       <section className="mb-4">
         <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-900 pb-1 mb-2">
-          Education
+          {L.education}
         </h2>
         {data.education.map((edu, index) => (
           <div key={index} className="mb-2">
@@ -156,7 +157,7 @@ export default function ResumeHTML({ data, origin = "" }: ResumeHTMLProps) {
       {/* Experience Section */}
       <section className="mb-4">
         <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-900 pb-1 mb-2">
-          Experience
+          {L.experience}
         </h2>
         {data.experience.map((exp, index) => (
           <div key={index} className="mb-3">
@@ -224,7 +225,7 @@ export default function ResumeHTML({ data, origin = "" }: ResumeHTMLProps) {
       {data.projects.length > 0 && (
       <section className="mb-4">
         <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-900 pb-1 mb-2">
-          Projects
+          {L.projects}
         </h2>
         {data.projects.map((project, index) => {
           const rawUrl = project.evidence || project.link || project.url || project.githubUrl || project.liveUrl;
@@ -271,7 +272,7 @@ export default function ResumeHTML({ data, origin = "" }: ResumeHTMLProps) {
       {/* Technical Skills Section */}
       <section className="mb-4">
         <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-900 pb-1 mb-2">
-          Skills
+          {L.skills}
         </h2>
         <div className="space-y-1 text-xs">
           {data.skills.map((skillCat, index) => (
@@ -287,7 +288,7 @@ export default function ResumeHTML({ data, origin = "" }: ResumeHTMLProps) {
       {data.codingProfiles && data.codingProfiles.length > 0 && (
         <section className="mb-4">
           <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-900 pb-1 mb-2">
-            Coding Profiles
+            {L.codingProfiles}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
             {data.codingProfiles.map((profile, index) => (
@@ -311,7 +312,7 @@ export default function ResumeHTML({ data, origin = "" }: ResumeHTMLProps) {
       {data.achievements && data.achievements.length > 0 && (
         <section className="mb-4">
           <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-900 pb-1 mb-2">
-            Achievements
+            {L.achievements}
           </h2>
           <ul className="list-disc list-inside ml-2 text-xs text-gray-800 space-y-0.5">
             {data.achievements.map((item, index) => (
@@ -325,7 +326,7 @@ export default function ResumeHTML({ data, origin = "" }: ResumeHTMLProps) {
       {data.certifications && data.certifications.length > 0 && (
         <section className="mb-4">
           <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-900 pb-1 mb-2">
-            Certifications
+            {L.certifications}
           </h2>
           <ul className="list-disc list-inside ml-2 text-xs text-gray-800 space-y-0.5">
             {data.certifications.map((cert, index) => (
