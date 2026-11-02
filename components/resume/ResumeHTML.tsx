@@ -1,6 +1,7 @@
 import { HiExternalLink, HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SECTION_LABELS, type ResumeData } from "@/lib/resume/types";
+import ResumeHTMLTwoColumn from "./ResumeHTMLTwoColumn";
 
 interface ResumeHTMLProps {
   data: ResumeData;
@@ -17,6 +18,7 @@ const formatUrl = (url?: string | null, origin = ""): string | null => {
 };
 
 export default function ResumeHTML({ data, origin = "" }: ResumeHTMLProps) {
+  if (data.layout === "two-column") return <ResumeHTMLTwoColumn data={data} />;
   const L = SECTION_LABELS[data.lang ?? "en"];
   return (
     <div className="w-full max-w-[850px] mx-auto bg-white text-gray-900 shadow-2xl rounded-sm p-6 sm:p-10 font-sans leading-relaxed text-sm my-6 border border-gray-200">

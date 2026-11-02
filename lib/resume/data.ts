@@ -1674,6 +1674,125 @@ const sisRdResume: ResumeData = {
   ],
 };
 
+// SIS Việt Nam — R&D Engineer (interventional devices), ENGLISH one-page
+// two-column CV. Layout from Batin's own one-page draft; claims kept to the
+// approved fact set (see sisRdResume). Consistency strategy (Batin 2026-11-02):
+// one thread in the summary ("applied science and automation in healthcare");
+// CDC + Department of Science and Technology shown as ONE continuous block
+// (transfer within Vinh Long provincial public service); stent and OpenELIS
+// under Projects, not employment; Turing as a single labelled contract line;
+// 2015–2018 as one line. Capacity in plates/day (never "4,000 samples");
+// co-first author (contributed equally, PMC8976547); "in-silico" and
+// "simulation" each once. Prose via /nha-van (NotebookLM) + humanizer pass.
+const sisEnResume: ResumeData = {
+  lang: "en",
+  layout: "two-column",
+  personal: {
+    name: "Nguyen Minh Phat",
+    title: "Target role: R&D Engineer, Interventional Devices",
+    email: "minhphat1@gmail.com",
+    phone: "+84 856 004 115",
+    location: "Can Tho, Vietnam",
+    website: "https://stent.agentdo.agency",
+    orcid: "0000-0002-2706-9572",
+    github: null,
+    linkedin: null,
+  },
+  summary:
+    "M.Sc. in Medical Sciences (Kanazawa University) working in applied science and automation in healthcare. That work runs from a barcode PCR laboratory workflow during five years of Vinh Long provincial public service, through OpenELIS Vietnam, an open-source laboratory information system, to an independent self-expanding nitinol stent design taken from parametric model through NSGA-II optimisation and SolidWorks CAD to Abaqus FEA. Research conducted in English, with two international publications.",
+  sectionTitles: { projects: "Projects (independent / open source)" },
+  projects: [
+    {
+      title: "Self-expanding nitinol stent for peripheral arteries (in-silico)",
+      role: "Design and simulation workflow built on Open Stent Design (Craig Bonsignore, CC-BY-SA) · stent.agentdo.agency",
+      period: "08/2026 – present",
+      url: "https://stent.agentdo.agency",
+      achievements: [
+        "Ported the Open Stent Design formulas from Python to TypeScript (golden test: agreement to 14 significant digits); ran NSGA-II optimisation (pymoo, 5 seeds × 40 generations × 30 candidates) that selected 17 crowns per ring, 10 rings, strut width 0.154 mm, wall 0.150 mm, cut tube Ø1.92 mm, shape-set Ø8.0 mm for a Ø6.5 mm vessel.",
+        "Built CAD models in SolidWorks (Wrap onto a tube) and Autodesk Fusion; exported STEP, F3D, SLDPRT and flat DXF/PDF laser-cut drawings; CAD volume within 0.03 % of the analytical value.",
+        "Ran Abaqus FEA on one superelastic nitinol ring cell crimped from Ø8.0 to Ø1.92 mm (peak crown strain about 21 %, mesh-checked), full-stent beam load cases (bending 30°/90°, 5 % stretch, 45° twist) and a preliminary Explicit crimp.",
+        "Referenced published strain limits (8–12 %) and radial force (0.39–1.7 N/cm); a geometric sensitivity analysis found strut length the strongest parameter, pointing to a proposed trial design with 1.6 mm long, 0.12 mm wide struts.",
+        "Kept traceable design notes (every figure tagged source, derived or assumed), a catalogue of 14 toolchain errors and 11 detection rules; published a 3D web page of 9 stent generations; automated the CAD–optimisation–FEA loop with Python scripts and AI.",
+      ],
+    },
+    {
+      title: "OpenELIS Vietnam — open-source laboratory information system",
+      role: "Fork of OpenELIS Global 2, developed by DIGI, University of Washington",
+      period: "10/2026 – present",
+      achievements: [
+        "Deploys and runs the fork for one private laboratory in Dong Thap, in a parallel trial since 10/2026, with a Vietnamese interface and result reading from 4 analysers (in trial).",
+        "Contributed upstream PR #4724 (multi-architecture container images, merged 15/10/2026), with 6 further PRs open; Vietnamese Language Coordinator by invitation of DIGI, University of Washington.",
+      ],
+    },
+  ],
+  experience: [
+    {
+      company: "Vinh Long Provincial Public Service",
+      position: "Five years in the same provincial system; transferred between units in 05/2026",
+      location: "Vinh Long, Vietnam",
+      startDate: "05/2021",
+      endDate: "present",
+      projects: [
+        {
+          name: "Technical officer, Molecular Biology Laboratory — CDC Vinh Long",
+          period: "05/2021 – 04/2026",
+          achievements: [
+            "Helped set up the new BSL-2 molecular biology laboratory: installed and ran the real-time PCR system, automated extractor and biosafety cabinet; wrote the SOPs; trained staff on the equipment.",
+            "Designed and programmed a barcode traceability system (Google Sheets, Apps Script): about 40 PCR plates (96-well) per day, up from under 300 samples per day; turnaround about 40 % shorter; used as the shared provincial workflow during the pandemic peak; Top 50 HIS-COVID 2021.",
+            "Produced in-house PCR positive controls for quality control and trained front-line health workers in specimen collection during COVID-19.",
+          ],
+        },
+        {
+          name: "Specialist, Innovation & Digital Transformation Center — Department of Science and Technology",
+          period: "05/2026 – present",
+          achievements: [
+            "Supports local businesses and startups applying AI and digital technology to operations; designs and teaches applied-AI and digital-transformation training for provincial staff.",
+          ],
+        },
+      ],
+    },
+  ],
+  experienceNotes: [
+    {
+      label: "Contract",
+      text: "AI Quality Analyst (Vietnamese), Google DeepMind Gemini Personalization program — via Turing, remote contract, 04–07/2026: evaluated Gemini responses against Google quality rubrics; daily written communication in English with a US team.",
+    },
+    { label: "Earlier", text: "Laboratory supplies sales and data analysis, Mekong Delta (2015–2018)." },
+  ],
+  education: [
+    {
+      institution: "Kanazawa University, Japan",
+      degree: "M.Sc. in Medical Sciences",
+      location: "Kanazawa, Japan",
+      startYear: "2018",
+      graduationYear: "2020",
+      bullets: ["Environmental and preventive medicine; programme and research in English; collected health check-up data for two published studies."],
+    },
+    {
+      institution: "Can Tho University of Medicine and Pharmacy",
+      degree: "B.Sc. in Medical Laboratory Technology",
+      location: "Can Tho, Vietnam",
+      startYear: "2011",
+      graduationYear: "2015",
+    },
+  ],
+  skills: [
+    { category: "Design & CAD", items: ["SolidWorks (Wrap onto tube, SLDPRT/STEP, laser-cut drawings DXF/PDF)", "Autodesk Fusion", "parametric design in code"] },
+    { category: "FEA & optimisation", items: ["Abaqus Standard/Explicit (superelastic nitinol; solid and beam models)", "CalculiX", "mesh convergence checks", "NSGA-II (pymoo)", "Pareto fronts", "golden testing"] },
+    { category: "Referenced", items: ["FDA 2005 fatigue guidance via Pelton 2008", "ASTM F2606 (three-point bending)"] },
+    { category: "Laboratory", items: ["SOP writing", "equipment installation and operation", "BSL-2", "real-time PCR", "in-house positive controls", "barcode traceability", "user training"] },
+    { category: "Software & data", items: ["Python", "TypeScript", "SQL", "Google Apps Script", "Power BI", "Linux", "Git"] },
+    { category: "Languages", items: ["English (IELTS 6.5; English-taught M.Sc., international publications)", "Vietnamese (native)"] },
+  ],
+  publications: [
+    "Co-first author (contributed equally): Hara A., Nguyen M. Phat, et al. Effect of β3-adrenergic receptor gene polymorphism and lifestyle on overweight in Japanese rural residents. Obesity Science & Practice. 2021;8(2):199–207.",
+    "Co-author: Suzuki K., Tsujiguchi H., Miyagi S., Nguyen M. Phat, et al. Association between serum 25-hydroxyvitamin D concentrations and chronic pain. Journal of Pain Research. 2020;13:2987–2996.",
+  ],
+  achievements: ["Top 50 HIS-COVID Innovations 2021 — Ministry of Science and Technology"],
+  certifications: ["Biosafety certificate — Pasteur Institute (2021)", "Google Cloud Gen AI Academy APAC 2026 (Cohort 3)"],
+  codingProfiles: [],
+};
+
 export const resumes: Record<string, ResumeData> = {
   default: defaultResume,
   // Per-job variants live here. Each key becomes a clean URL at
@@ -1693,6 +1812,7 @@ export const resumes: Record<string, ResumeData> = {
   "abbott-science-content": abbottScienceContentResume,
   "longchau-lab-ops": longchauLabOpsResume,
   sis: sisRdResume,
+  "sis-en": sisEnResume,
 };
 
 export const resumeData = resumes.default;

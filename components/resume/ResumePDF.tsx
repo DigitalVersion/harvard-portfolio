@@ -1,5 +1,6 @@
 import { Document, Page, Text, View, StyleSheet, Link, Svg, Path, Rect, Font } from "@react-pdf/renderer";
 import { SECTION_LABELS, type ResumeData } from "@/lib/resume/types";
+import ResumePDFTwoColumn from "./ResumePDFTwoColumn";
 
 // Register Roboto font (supports Vietnamese and other extended Latin characters)
 Font.register({
@@ -294,6 +295,7 @@ interface ResumePDFProps {
 }
 
 const ResumePDF = ({ data, type = "default", origin = "" }: ResumePDFProps) => {
+  if (data.layout === "two-column") return <ResumePDFTwoColumn data={data} type={type} />;
   const L = SECTION_LABELS[data.lang ?? "en"];
   return (
   <Document title={`Resume - ${data.personal.name} (${type})`}>

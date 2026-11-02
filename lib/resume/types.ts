@@ -7,6 +7,7 @@ export interface PersonalInfo {
   github?: string | null;
   linkedin?: string | null;
   website?: string | null;
+  orcid?: string | null;
 }
 
 export interface EducationItem {
@@ -71,7 +72,7 @@ export type ResumeLang = "en" | "vi";
 /** Section headings per language. Web view and PDF both read from here so
  * they never drift apart. */
 export const SECTION_LABELS: Record<ResumeLang, Record<
-  "summary" | "education" | "experience" | "projects" | "skills" | "codingProfiles" | "achievements" | "certifications",
+  "summary" | "education" | "experience" | "projects" | "skills" | "codingProfiles" | "achievements" | "certifications" | "publications" | "awards",
   string
 >> = {
   en: {
@@ -83,6 +84,8 @@ export const SECTION_LABELS: Record<ResumeLang, Record<
     codingProfiles: "Coding Profiles",
     achievements: "Achievements",
     certifications: "Certifications",
+    publications: "Publications",
+    awards: "Awards & Certificates",
   },
   vi: {
     summary: "Tóm tắt",
@@ -93,12 +96,26 @@ export const SECTION_LABELS: Record<ResumeLang, Record<
     codingProfiles: "Hồ sơ lập trình",
     achievements: "Thành tích và công bố",
     certifications: "Chứng chỉ",
+    publications: "Công bố",
+    awards: "Giải thưởng và chứng chỉ",
   },
 };
+
+export type SectionKey = keyof (typeof SECTION_LABELS)["en"];
 
 export interface ResumeData {
   /** Language of the section headings (content language is up to the data). Defaults to "en". */
   lang?: ResumeLang;
+  /** "two-column": one-page layout — left = summary / projects / experience,
+   * right = education / skills / publications / awards. Defaults to single column. */
+  layout?: "single" | "two-column";
+  /** Per-variant heading overrides (e.g. projects: "Projects (independent / open source)"). */
+  sectionTitles?: Partial<Record<SectionKey, string>>;
+  /** Two-column only: compact labelled lines at the end of Experience
+   * (e.g. { label: "Contract", text: "..." }), not full entries. */
+  experienceNotes?: { label: string; text: string }[];
+  /** Two-column only: publications listed in the right column. */
+  publications?: string[];
   personal: PersonalInfo;
   summary?: string;
   education: EducationItem[];
