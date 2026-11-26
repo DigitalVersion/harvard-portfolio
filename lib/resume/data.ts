@@ -1802,6 +1802,77 @@ const sisEnResume: ResumeData = {
   codingProfiles: [],
 };
 
+// iSofH — Nhân viên triển khai phần mềm ngành Y tế, Cần Thơ (dự án BV Đa khoa TP. Cần Thơ).
+// Tiếng Việt, tái dùng nguyên các mục kinh nghiệm đã được Batin duyệt của bản SIS
+// (sisOpenElis, sisCdc, sisSoKhcn, sisTuring, sis2015); bỏ dự án stent (không liên quan).
+// Nhấn: triển khai OpenELIS (phần mềm xét nghiệm) + hệ mã vạch CDC + đào tạo người dùng.
+// Câu chữ mới chỉ có tiêu đề, tóm tắt và nhóm kỹ năng, lấy từ dữ kiện đã duyệt.
+const isofhCdc: ExperienceItem = {
+  ...sisCdc,
+  achievements: [sisCdc.achievements![1], sisCdc.achievements![0], sisCdc.achievements![3], sisCdc.achievements![2]],
+};
+const isofhTrienKhaiResume: ResumeData = {
+  lang: "vi",
+  personal: {
+    name: "Nguyễn Minh Phát",
+    title: "Thạc sĩ Khoa học Y khoa · Triển khai phần mềm xét nghiệm và chuyển đổi số y tế",
+    email: "minhphat1@gmail.com",
+    phone: "0856 004 115",
+    location: "Cần Thơ, Việt Nam",
+    github: "https://github.com/kanazawahere",
+    linkedin: "https://www.linkedin.com/in/phat-nguyen-9b53365a",
+    website: "https://github.com/DigitalVersion/OpenELIS-Vietnam",
+  },
+  summary:
+    "Cử nhân Kỹ thuật Xét nghiệm Y học (Đại học Y Dược Cần Thơ), Thạc sĩ Khoa học Y khoa (Đại học Kanazawa, Nhật Bản). Đang triển khai phần mềm quản lý xét nghiệm OpenELIS Global 2 cho một phòng xét nghiệm tư nhân tại Đồng Tháp: cài đặt, Việt hoá giao diện, kết nối 4 máy xét nghiệm, chạy song song với phần mềm cũ. Có 5 năm tại phòng xét nghiệm CDC Vĩnh Long: tự xây và đưa vào vận hành hệ truy xuất mẫu bằng mã vạch (khoảng 4.000 mẫu/ngày, xét nghiệm gộp mẫu; Top 50 HIS-COVID 2021), viết SOP và đào tạo người dùng. Hiểu quy trình khoa xét nghiệm và bệnh viện từ phía người làm chuyên môn.",
+  education: sisRdResume.education,
+  experience: [sisOpenElis, sisSoKhcn, sisTuring, isofhCdc, sis2015],
+  experienceGroups: [
+    { title: "Triển khai phần mềm y tế", items: [sisOpenElis] },
+    { title: "Kinh nghiệm công tác", items: [sisSoKhcn, sisTuring, isofhCdc, sis2015] },
+  ],
+  skills: [
+    {
+      category: "Triển khai phần mềm y tế",
+      items: [
+        "Cài đặt, cấu hình và Việt hoá phần mềm quản lý xét nghiệm (OpenELIS Global 2)",
+        "Kết nối máy xét nghiệm với phần mềm",
+        "Chạy song song hệ thống mới và cũ trước khi chuyển đổi",
+        "Viết SOP, hướng dẫn sử dụng và đào tạo người dùng",
+        "Truy xuất mẫu bằng mã vạch",
+      ],
+    },
+    {
+      category: "Chuyên môn y tế",
+      items: [
+        "Quy trình khoa xét nghiệm: tiếp nhận mẫu, PCR, xét nghiệm miễn dịch, kiểm soát chất lượng, trả kết quả",
+        "An toàn sinh học cấp 2",
+        "Phân tích dữ liệu bệnh viện bằng Power BI",
+      ],
+    },
+    {
+      category: "Kỹ thuật",
+      items: ["Linux", "Docker/Podman", "SQL", "Git", "Python", "TypeScript", "Google Apps Script", "Ứng dụng AI (Claude Code, MCP) vào vận hành"],
+    },
+    {
+      category: "Ngôn ngữ",
+      items: ["Tiếng Việt (bản ngữ)", "Tiếng Anh IELTS 6.5 — đọc tài liệu kỹ thuật, làm việc hằng ngày với đội ở Mỹ"],
+    },
+  ],
+  projects: [],
+  codingProfiles: [],
+  certifications: [
+    "Claude Certified Architect – Foundations, Anthropic (11/2026; 898 điểm, điểm đạt 720) — xác minh: credly.com/badges/a735b404-59ee-4c5f-b6ce-d6ec3eefb490",
+    "Chứng chỉ an toàn sinh học — Viện Pasteur (2021)",
+    "Chứng chỉ hoàn thành Google Cloud Gen AI Academy APAC 2026, Cohort 3",
+  ],
+  achievements: [
+    "Top 50 sáng kiến HIS-COVID 2021 — Bộ Khoa học và Công nghệ (hệ truy xuất mẫu bằng mã vạch)",
+    "Đóng góp mã nguồn mở cho OpenELIS Global (PR #4724 được nhận 15/10/2026); Điều phối viên tiếng Việt do DIGI – Đại học Washington mời",
+    "Hai bài báo quốc tế: Obesity Science & Practice (2021, đồng tác giả thứ nhất) và Journal of Pain Research (2020)",
+  ],
+};
+
 export const resumes: Record<string, ResumeData> = {
   default: defaultResume,
   // Per-job variants live here. Each key becomes a clean URL at
@@ -1822,6 +1893,7 @@ export const resumes: Record<string, ResumeData> = {
   "longchau-lab-ops": longchauLabOpsResume,
   sis: sisRdResume,
   "sis-en": sisEnResume,
+  "isofh-trien-khai": isofhTrienKhaiResume,
 };
 
 export const resumeData = resumes.default;
